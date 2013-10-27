@@ -1,5 +1,5 @@
-Component-Based-Term-Project
-============================
+Component-Based-Term-Project 2013
+=================================
 
 Repository for a Puppy store website.
 
