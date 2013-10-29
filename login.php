@@ -9,6 +9,7 @@ spl_autoload_register(array('AutoLoader', 'autoLoad'));
 
 $layout = new Layout();
 
+$error = $_GET['retry']; //triggers error message for unfilled fields
 echo $layout->loadNarrowNav('Login', '');
 ?>
 <!-- Custom styles for this template -->
@@ -19,13 +20,25 @@ echo $layout->loadNarrowNav('Login', '');
 	<table align="center" width="100%">
 		<tr>
 			<td>
-				<form class="form-signin">
+				<form name ="register" class="form-signin" action="classes/processRegistration.php" method="post">
 					<h2 class="form-signin-heading">New Users</h2>
-					<input type="text" class="form-control" name="first_name" id = "first_name" placeholder="First Name" autofocus/>
-					<input type="text" class="form-control" name="last_name" id = "last_name" placeholder="Last Name"/>
+					<input type="text" class="form-control" name="firstname" id = "firstname" placeholder="First Name" autofocus/>
+					<input type="text" class="form-control" name="lastname" id = "lastname" placeholder="Last Name"/>
 					<input type="text" class="form-control" name="email" id = "email" placeholder="Email Address"/>
 					<input type="password" class="form-control" name="password" id="password" placeholder="Password"/>
-					<button class="btn btn-lg btn-primary btn-block" type="submit">Submit</button>
+					<input type="password" class="form-control" name="password2" id="password2" placeholder="Confirm Password"/>
+					<?php
+						if($error != 0)
+						{
+							echo '<span class="help-block"<p style="color:red" align ="center"><i>Please completely fill the<br />registration form.<i></p></span>';
+						}
+						else
+						{
+							echo '<br />';
+						}
+					?>
+					<button class="btn btn-lg btn-primary btn-block" type="submit" value="Register">Submit</button>
+					
 				</form>
 			</td>
 			<td valign="top">

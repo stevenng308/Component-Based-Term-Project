@@ -33,8 +33,9 @@ body {
   border-bottom-left-radius: 0;
   border-bottom-right-radius: 0;
 }
+
 .form-signin input[type="password"] {
-  margin-bottom: 10px;
-  border-top-left-radius: 0;
-  border-top-right-radius: 0;
+  margin-bottom: -1px; /* pads the bottom of input fields of type password/2 creating a gap*/
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
 }
