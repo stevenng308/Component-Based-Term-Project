@@ -36,7 +36,7 @@ echo $layout->loadNarrowNav('Login', '');
 						{
 							if (empty($str))
 							{
-								//echo '<span class="help-block"<p style="color:red" align ="center"><i>Please completely fill the<br />registration form.<i></p></span>';
+								echo '<span class="help-block"<p style="color:red" align ="center"><i>Please completely fill the<br />registration form.<i></p></span>';
 								$escape = false;
 								break;
 							}
