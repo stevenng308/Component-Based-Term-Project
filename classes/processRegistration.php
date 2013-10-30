@@ -13,5 +13,14 @@ foreach($_POST as $str)
 		echo "It did work <br />";
 		echo $str;
 	}
+	
+	if ($_POST['password'] == $_POST['password2'])
+	{
+		echo 'Password is correct.';
+	}
+	else
+	{
+		echo '<script type="text/javascript">alert("Incorrect password.");</script>';
+	}
 }
 ?>
