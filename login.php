@@ -9,7 +9,6 @@ spl_autoload_register(array('AutoLoader', 'autoLoad'));
 
 $layout = new Layout();
 
-$error = $_GET['retry']; //triggers error message for unfilled fields
 echo $layout->loadNarrowNav('Login', '');
 ?>
 <!-- Custom styles for this template -->
@@ -17,53 +16,33 @@ echo $layout->loadNarrowNav('Login', '');
 			
 <div class="container">
 <div id="wrap">
-	<table align="center" width="100%">
-		<tr>
-			<td>
-				<form name ="register" class="form-signin" action="<?php echo $_SERVER['SCRIPT_NAME'] ?>" method="post">
-					<h2 class="form-signin-heading">New Users</h2>
-					<input type="text" class="form-control" name="firstname" id = "firstname" placeholder="First Name" autofocus/>
-					<input type="text" class="form-control" name="lastname" id = "lastname" placeholder="Last Name"/>
-					<input type="text" class="form-control" name="email" id = "email" placeholder="Email Address"/>
-					<input type="password" class="form-control" name="password" id="password" placeholder="Password"/>
-					<input type="password" class="form-control" name="password2" id="password2" placeholder="Confirm Password"/>
-					<br />
-					<?php
-					$escape = true;
-					if (isset($_POST['submit'])) 
-					{
-						foreach($_POST as $str)
-						{
-							if (empty($str))
-							{
-								echo '<span class="help-block"<p style="color:red" align ="center"><i>Please completely fill the<br />registration form.<i></p></span>';
-								$escape = false;
-								break;
-							}
-						}
-						if ($_POST['password'] != $_POST['password2'] && $escape)
-						{
-							echo '<span class="help-block"<p style="color:red" align ="center"><i>The passwords are not correct.<i></p></span>';
-						}
-					}
-					?>
-					<button class="btn btn-lg btn-primary btn-block" type="submit" name="submit" value="Register">Submit</button>
-					
-				</form>
-			</td>
-			<td valign="top">
-				<form class="form-signin">
-					<h2 class="form-signin-heading">Existing Users</h2>
-					<input type="text" class="form-control" placeholder="Email address" autofocus>
-					<input type="password" class="form-control" placeholder="Password">
-					<label class="checkbox">
-						<input type="checkbox" value="remember-me"> Remember me
-					</label>
-					<button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
-				</form>
-			</td>
-		</tr>
-	</table>
+	<form name="signin" class="form-signin" action="<?php echo $_SERVER['SCRIPT_NAME'] ?>" method="post">
+		<h2 class="form-signin-heading">Existing Users</h2>
+			<input type="text" class="form-control" placeholder="Email address" autofocus>
+			<input type="password" class="form-control" placeholder="Password">
+			<label class="checkbox">
+				<input type="checkbox" value="remember-me"> Remember me
+			</label>
+			<button class="btn btn-lg btn-primary btn-block" type="submit" name="submit">Sign in</button>
+			<span class="help-block">Don't have an account? Click <a href="register.php">here</a> to register for one.</span>
+	</form>
+	<?php
+		if (isset($_POST['submit'])) 
+		{
+			foreach($_POST as $str)
+			{
+				echo $str;
+				if (empty($str))
+				{
+					echo '<div class="alert alert-danger alert-dismissable">
+						<button type="button" class="close" data-dismiss="alert">&times;</button>
+						<p><strong>Error!</strong> Please input your email and password to sign in.</p>
+						 </div>';
+					break;
+				}
+			}
+		}
+	?>
 	<div id="push"></div>
 	</div>
 </div>

@@ -20,7 +20,7 @@ echo $layout->loadNarrowNav('Home', '');
 	<div class="jumbotron">
         <h1>Welcome to<br /> Paws For A Cause!</h1>
         <p class="lead">Adopt a paws in need and you will find a new bond with your new furry companion. Register a new account or sign in with your existing account.</p>
-        <p><a class="btn btn-lg btn-success" href="login.php">Sign up today</a></p>
+        <p><a class="btn btn-lg btn-success" href="register.php">Sign up today</a></p>
     </div>
 
 	<div class="row marketing">

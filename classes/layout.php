@@ -84,6 +84,12 @@ class Layout
 					<li><a href="#">About</a></li>
 					<li class="active"><a href="login.php">Sign-In</a></li>';
 		}
+		else
+		{
+			$links = '<li><a href="index.php">Home</a></li>
+					<li><a href="#">About</a></li>
+					<li><a href="login.php">Sign-In</a></li>';
+		}
 		$func = '
 		<!DOCTYPE html>
 			<html lang="en">
