@@ -1,8 +1,14 @@
 <?php
+require_once dirname(dirname(__FILE__)) .'\AutoLoader.php';
+spl_autoload_register(array('AutoLoader', 'autoLoad'));
+
+$database = new Database();
 //retrieve data from the POST variable
+include('../register.php');
 foreach($_POST as $str)
 {
-	if ($str == "")
+	echo $str;
+	/*if ($str == "")
 	{
 		echo "It didn't worked <br />";
 		header('Location: ../login.php?retry=1');
@@ -21,6 +27,6 @@ foreach($_POST as $str)
 	else
 	{
 		echo '<script type="text/javascript">alert("Incorrect password.");</script>';
-	}
+	}*/
 }
 ?>

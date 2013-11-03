@@ -72,23 +72,54 @@ class Layout
 	
 	public function loadNarrowNav($title, $dir)
 	{
+		session_start();
 		if ($title == "Home")
 		{
-			$links = '<li class="active"><a href="index.php">Home</a></li>
+		
+			if(!isset($_SESSION['sess_user_id']) || (trim($_SESSION['sess_user_id']) == '')) 
+			{
+				$links = '<li class="active"><a href="index.php">Home</a></li>
 					<li><a href="#">About</a></li>
 					<li><a href="login.php">Sign-In</a></li>';
+			}
+			else
+			{
+				$links = '<li class="active"><a href="index.php">Home</a></li>
+					<li><a href="#">About</a></li>
+					<li><a href="classes/logout.php">Sign-Out</a></li>';
+			}
 		}
 		else if ($title == "Login")
 		{
-			$links = '<li><a href="index.php">Home</a></li>
+			if(!isset($_SESSION['sess_user_id']) || (trim($_SESSION['sess_user_id']) == '')) 
+			{
+				$links = '<li><a href="index.php">Home</a></li>
 					<li><a href="#">About</a></li>
 					<li class="active"><a href="login.php">Sign-In</a></li>';
+			}
+			else
+			{
+				$links = '<li><a href="index.php">Home</a></li>
+					<li><a href="#">About</a></li>
+					<li class="active"><a href="classes/logout.php">Sign-Out</a></li>';
+			}
+			
 		}
 		else
 		{
-			$links = '<li><a href="index.php">Home</a></li>
+			if(!isset($_SESSION['sess_user_id']) || (trim($_SESSION['sess_user_id']) == '')) 
+			{
+				$links = '<li><a href="index.php">Home</a></li>
 					<li><a href="#">About</a></li>
 					<li><a href="login.php">Sign-In</a></li>';
+			}
+			else
+			{
+				$links = '<li><a href="index.php">Home</a></li>
+					<li><a href="#">About</a></li>
+					<li><a href="classes/logout.php">Sign-Out</a></li>';
+			}
+			
 		}
 		$func = '
 		<!DOCTYPE html>
