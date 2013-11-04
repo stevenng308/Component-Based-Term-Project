@@ -18,7 +18,7 @@ echo $layout->loadNarrowNav('Home', '');
 <div class="container">
 	<div id="wrap"> <!-- wraps the main div in its own section so it stays where it needs to be-->
 	<div align="right">
-		<strong><span class="simpleCart_quantity"></span> items - <span class="simpleCart_total"></span></strong><br />
+		<span class="badge"><span class="simpleCart_quantity"></span></span><strong> items - <span class="simpleCart_total"></span></strong><br />
 		<a href="javascript:;" class="btn btn-sm btn-primary simpleCart_empty">Empty Cart</a>
 		<a href="javascript:;" class="btn btn-sm btn-success simpleCart_checkout">Checkout</a>
 	</div>
@@ -62,12 +62,50 @@ echo $layout->loadNarrowNav('Home', '');
 			</div>
 
 			<div class="simpleCart_shelfItem">
-				<h3 class="item_name">CatDog <span class="item_price">$509.99</span></h3>
+				<h3 class="item_name">CatDog <span class="item_price">$509.99</span> <span class="label label-danger">HotDog</span></h3>
 
 				<a href="javascript:;" class="btn btn-sm btn-primary item_add"> Add to Cart </a>
 			</div>
 		</div>
 	</div>
+	<div class="row">
+			<div class="col-sm-6 col-md-4">
+				<div class="thumbnail">
+					<img data-src="holder.js/300x200" alt="...">
+					<div class="caption">
+					<div class="simpleCart_shelfItem">
+						<h3>CoolDog</h3>
+						<span class="item_price">$49.99</span>
+						<p><a href="javascript:;" class="btn btn-sm btn-primary item_add"> Add to Cart </a> <a href="#" class="btn btn-default" role="button">Button</a></p>
+					</div>
+					</div>
+				</div>
+			</div>
+			<div class="col-sm-6 col-md-4">
+				<div class="thumbnail">
+					<img data-src="holder.js/300x200" alt="...">
+					<div class="caption">
+					<div class="simpleCart_shelfItem">
+						<h3>Dawg</h3>
+						<span class="item_price">$409.99</span>
+						<p><a href="javascript:;" class="btn btn-sm btn-primary item_add"> Add to Cart </a> <a href="#" class="btn btn-default" role="button">Button</a></p>
+					</div>
+					</div>
+				</div>
+			</div>
+			<div class="col-sm-6 col-md-4">
+				<div class="thumbnail">
+					<img data-src="holder.js/300x200" alt="...">
+					<div class="caption">
+					<div class="simpleCart_shelfItem">
+						<h3>BroDog</h3>
+						<span class="item_price">$109.99</span>
+						<p><a href="javascript:;" class="btn btn-sm btn-primary item_add"> Add to Cart </a> <a href="#" class="btn btn-default" role="button">Button</a></p>
+					</div>
+					</div>
+				</div>
+			</div>
+		</div>
 	<!--push div to push the footer down-->
 	<div id="push"></div>
 	</div>
