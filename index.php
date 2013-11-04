@@ -17,33 +17,55 @@ echo $layout->loadNarrowNav('Home', '');
 <link href="bootstrap/dist/css/jumbotron-narrow.css" rel="stylesheet">
 <div class="container">
 	<div id="wrap"> <!-- wraps the main div in its own section so it stays where it needs to be-->
+	<div align="right">
+		<strong><span class="simpleCart_quantity"></span> items - <span class="simpleCart_total"></span></strong><br />
+		<a href="javascript:;" class="btn btn-sm btn-primary simpleCart_empty">Empty Cart</a>
+		<a href="javascript:;" class="btn btn-sm btn-success simpleCart_checkout">Checkout</a>
+	</div>
+
 	<div class="jumbotron">
         <h1>Welcome to<br /> Paws For A Cause!</h1>
         <p class="lead">Adopt a paws in need and you will find a new bond with your new furry companion. Register a new account or sign in with your existing account.</p>
         <p><a class="btn btn-lg btn-success" href="register.php">Sign up today</a></p>
     </div>
-
 	<div class="row marketing">
 		<div class="col-lg-6">
-			<h4>Subheading</h4>
-			<p>Donec id elit non mi porta gravida at eget metus. Maecenas faucibus mollis interdum.</p>
+			<div class="simpleCart_shelfItem">
+				<h3 class="item_name">Dog <span class="item_price">$35.99</span></h3>
 
-			<h4>Subheading</h4>
-			<p>Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Cras mattis consectetur purus sit amet fermentum.</p>
+				<a href="javascript:;" class="btn btn-sm btn-primary item_add"> Add to Cart </a>
+			</div>
+			<div class="simpleCart_shelfItem">
+				<h3 class="item_name">A Dog <span class="item_price">$13.99</span></h3>
 
-			<h4>Subheading</h4>
-			<p>Maecenas sed diam eget risus varius blandit sit amet non magna.</p>
+				<a href="javascript:;" class="btn btn-sm btn-primary item_add"> Add to Cart </a>
+			</div>
+
+			<div class="simpleCart_shelfItem">
+				<h3 class="item_name">The Dog <span class="item_price">$0.99</span></h3>
+
+				<a href="javascript:;" class="btn btn-sm btn-primary item_add"> Add to Cart </a>
+			</div>
 		</div>
 
 		<div class="col-lg-6">
-			<h4>Subheading</h4>
-			<p>Donec id elit non mi porta gravida at eget metus. Maecenas faucibus mollis interdum.</p>
+			<div class="simpleCart_shelfItem">
+				<h3 class="item_name">iDog <span class="item_price">$149.99</span></h3>
 
-			<h4>Subheading</h4>
-			<p>Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Cras mattis consectetur purus sit amet fermentum.</p>
+				<a href="javascript:;" class="btn btn-sm btn-primary item_add"> Add to Cart </a>
+			</div>
 
-			<h4>Subheading</h4>
-			<p>Maecenas sed diam eget risus varius blandit sit amet non magna.</p>
+			<div class="simpleCart_shelfItem">
+				<h3 class="item_name">myDog <span class="item_price">$3.99</span></h3>
+
+				<a href="javascript:;" class="btn btn-sm btn-primary item_add"> Add to Cart </a>
+			</div>
+
+			<div class="simpleCart_shelfItem">
+				<h3 class="item_name">CatDog <span class="item_price">$509.99</span></h3>
+
+				<a href="javascript:;" class="btn btn-sm btn-primary item_add"> Add to Cart </a>
+			</div>
 		</div>
 	</div>
 	<!--push div to push the footer down-->
@@ -53,4 +75,6 @@ echo $layout->loadNarrowNav('Home', '');
 <?php	  
 echo $layout->loadFooter('');
 ?>
+<script src="bootstrap/dist/js/simpleCart.js"></script>
+
 </html>
