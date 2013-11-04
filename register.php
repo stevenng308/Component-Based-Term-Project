@@ -29,39 +29,41 @@ echo $layout->loadNarrowNav('Registration', '');
 					
 	</form>
 	<?php
-					$escape = true;
-					if (isset($_POST['submit'])) 
+		$escape = true;
+		if (isset($_POST['submit'])) 
+		{
+			foreach($_POST as $str)
+			{
+				if (empty($str))
 					{
-						foreach($_POST as $str)
-						{
-							if (empty($str))
-							{
-								echo '<div class="alert alert-danger">
-										<p><strong>Error!</strong> Please completely fill out the registration form.</p>
-									 </div>';
-								$escape = false;
-								return;
-							}
-						}
-						if ($_POST['password'] != $_POST['password2'] && $escape)
-						{
-							echo '<div class="alert alert-danger">
-										<p><strong>Error!</strong> The passwords do not match. Please check your input.</p>
-								 </div>';
-						}
-						else if (strlen($_POST['firstname']) > 20 || strlen($_POST['lastname']) > 25 || strlen($_POST['email']) > 50  )
-						{
-							echo '<div class="alert alert-danger">
-										<p><strong>Error!</strong> One or more of your inputs are too long.</p>
-								 </div>';
-						}
-						else
-						{
-							$database->insert($_POST);
-							header('location: login.php');
-						}
+						echo '<div class="alert alert-danger">
+							<p><strong>Error!</strong> Please completely fill out the registration form.</p>
+						 </div>';
+						$escape = false;
+						return;	
 					}
-					?>
+			}
+			if ($_POST['password'] != $_POST['password2'] && $escape)
+			{
+				echo '<div class="alert alert-danger alert-dismissable">
+					<button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+					<p><strong>Error!</strong> The passwords do not match. Please check your input.</p>
+					 </div>';
+			}
+			else if (strlen($_POST['firstname']) > 20 || strlen($_POST['lastname']) > 25 || strlen($_POST['email']) > 50  )
+			{
+				echo '<div class="alert alert-danger alert-dismissable">
+					<button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+					<p><strong>Error!</strong> One or more of your inputs are too long.</p>
+					 </div>';
+			}
+			else
+			{	
+				$database->insert($_POST);
+				header('location: login.php');	
+			}
+		}
+	?>
 	<div id="push"></div>
 	</div>
 </div>

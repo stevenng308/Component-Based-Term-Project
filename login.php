@@ -64,10 +64,10 @@ echo $layout->loadNarrowNav('Login', '');
 			//echo $userData['password'];
 			if($hash != $userData['password']) // Incorrect password.
 			{
-				echo '<div class="alert alert-danger">
+				echo '<div class="alert alert-danger alert-dismissable">
+					<button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
 					<p><strong>Error!</strong> Invalid email address or password. Please input your correct login information.</p>
 				 </div>';
-				return;
 			}
 			else
 			{
