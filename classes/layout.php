@@ -1,5 +1,6 @@
 <?php
 //Class for handling the template of the layout of the Views
+//Author: Steven Ng
 class Layout
 {
 	public function loadScrollNavBar($title, $dir)
@@ -193,6 +194,7 @@ class Layout
 		<script src="'. $dir .'bootstrap/dist/js/bootstrap.min.js"></script>
 		<script src="'. $dir .'bootstrap/dist/js/simpleCart.js"></script>
 		<script src="'. $dir .'bootstrap/dist/js/popover.js"></script>
+		<script src="'. $dir .'bootstrap/dist/js/holder.js"></script>
 		</body>';
 		
 		return $func;

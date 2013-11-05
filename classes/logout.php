@@ -1,4 +1,6 @@
 <?php
+//Logout function
+//Author: Steven Ng
 session_start();
 session_destroy();
 echo '<div align="center">

@@ -1,4 +1,6 @@
 <?php
+//Class handlign Database connection and querying it
+//Author: Steven Ng forked from Yaw Agyepong
 class Database
 {
 	private $dbHOST = "localhost";

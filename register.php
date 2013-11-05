@@ -1,6 +1,6 @@
 <!-- Paws For A Cause -->
 <!-- Author: Steven Ng -->
-<!-- login -->
+<!-- register -->
 
 <html>
 <?php

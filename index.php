@@ -46,11 +46,11 @@ echo $layout->loadNarrowNav('Home', '');
 	<div class="row">
 			<div class="col-sm-6 col-md-4">
 				<div class="thumbnail">
-					<img data-src="holder.js/300x200" alt="...">
+					<img src="images/akita.jpeg" alt="Akita">
 					<div class="caption">
 					<div class="simpleCart_shelfItem">
-						<h3>CoolDog</h3>
-						<span class="item_price">$49.99</span> <span class="label label-info">ChilliDog</span>
+						<h3 class="item_name">CoolDog
+						<span class="item_price">$49.99</span></h3><span class="label label-info">ChilliDog</span>
 						<p><a href="javascript:;" class="btn btn-sm btn-primary item_add"> Add to Cart </a> <a href="#" class="btn btn-default" role="button">Button</a></p>
 					</div>
 					</div>
@@ -58,11 +58,11 @@ echo $layout->loadNarrowNav('Home', '');
 			</div>
 			<div class="col-sm-6 col-md-4">
 				<div class="thumbnail">
-					<img data-src="holder.js/300x200" alt="...">
+					<img src="images/shiba.jpg" alt="Shiba Inuko">
 					<div class="caption">
 					<div class="simpleCart_shelfItem">
-						<h3>Dawg</h3>
-						<span class="item_price">$409.99</span> <span class="label label-danger">SpicyDog</span>
+						<h3 class="item_name">Dawg
+						<span class="item_price">$409.99</span></h3><span class="label label-danger">SpicyDog</span>
 						<p><a href="javascript:;" class="btn btn-sm btn-primary item_add"> Add to Cart </a> <a href="#" class="btn btn-default" role="button">Button</a></p>
 					</div>
 					</div>
@@ -70,11 +70,11 @@ echo $layout->loadNarrowNav('Home', '');
 			</div>
 			<div class="col-sm-6 col-md-4">
 				<div class="thumbnail">
-					<img data-src="holder.js/300x200" alt="...">
+					<img src="images/densuke.png" alt="Densuke ;_;">
 					<div class="caption">
 					<div class="simpleCart_shelfItem">
-						<h3>BroDog</h3>
-						<span class="item_price">$109.99</span>
+						<h3 class="item_name">BroDog
+						<span class="item_price">$109.99</span></h3>
 						<p><a href="javascript:;" class="btn btn-sm btn-primary item_add"> Add to Cart </a> <a href="#" class="btn btn-default" role="button">Button</a></p>
 					</div>
 					</div>
