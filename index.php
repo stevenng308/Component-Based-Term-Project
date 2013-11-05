@@ -9,25 +9,78 @@
 require_once '\AutoLoader.php';
 spl_autoload_register(array('AutoLoader', 'autoLoad'));
 
+session_start();
 $layout = new Layout();
-
+$loggedIn = false;
+if(!isset($_SESSION['sess_user_id']) || (trim($_SESSION['sess_user_id']) == '')) 
+{
+	$loggedIn = true;
+}
 echo $layout->loadNarrowNav('Home', '');
 ?>
 <!-- Custom styles for this page-->
 <link href="bootstrap/dist/css/jumbotron-narrow.css" rel="stylesheet">
 <div class="container">
 	<div id="wrap"> <!-- wraps the main div in its own section so it stays where it needs to be-->
-	<div align="right">
+	<!--<div align="right">
 		<span class="badge"><span class="simpleCart_quantity"></span></span><strong> items - <span class="simpleCart_total"></span></strong><br />
 		<a href="javascript:;" class="btn btn-sm btn-primary simpleCart_empty">Empty Cart</a>
 		<a href="javascript:;" class="btn btn-sm btn-success simpleCart_checkout">Checkout</a>
-	</div>
-
-	<div class="jumbotron">
-        <h1>Welcome to<br /> Paws For A Cause!</h1>
-        <p class="lead">Adopt a paws in need and you will find a new bond with your new furry companion. Register a new account or sign in with your existing account.</p>
-        <p><a class="btn btn-lg btn-success" href="register.php">Sign up today</a></p>
-    </div>
+		<button type="button" class="btn btn-primary" data-container="body" data-toggle="popover" 
+		data-placement="bottom" data-content="" data-original-title="" title="">
+        <strong><span class="simpleCart_quantity"></span> items - <span class="simpleCart_total"></span></strong>&nbsp;<span class="glyphicon glyphicon-shopping-cart"></span>
+        </button> 
+	</div> <br />-->
+<?php
+	//echo $loggedIn;
+	if (($loggedIn))
+	{	echo '
+		<div class="jumbotron">
+			<h1>Welcome to<br /> Paws For A Cause!</h1>
+			<p class="lead">Adopt a paws in need and you will find a new bond with your new furry companion. Register a new account or sign in with your existing account.</p>
+			<p><a class="btn btn-lg btn-success" href="register.php">Sign up today</a></p>
+		</div>
+		';
+	}
+?>
+	<div class="row">
+			<div class="col-sm-6 col-md-4">
+				<div class="thumbnail">
+					<img data-src="holder.js/300x200" alt="...">
+					<div class="caption">
+					<div class="simpleCart_shelfItem">
+						<h3>CoolDog</h3>
+						<span class="item_price">$49.99</span> <span class="label label-info">ChilliDog</span>
+						<p><a href="javascript:;" class="btn btn-sm btn-primary item_add"> Add to Cart </a> <a href="#" class="btn btn-default" role="button">Button</a></p>
+					</div>
+					</div>
+				</div>
+			</div>
+			<div class="col-sm-6 col-md-4">
+				<div class="thumbnail">
+					<img data-src="holder.js/300x200" alt="...">
+					<div class="caption">
+					<div class="simpleCart_shelfItem">
+						<h3>Dawg</h3>
+						<span class="item_price">$409.99</span> <span class="label label-danger">SpicyDog</span>
+						<p><a href="javascript:;" class="btn btn-sm btn-primary item_add"> Add to Cart </a> <a href="#" class="btn btn-default" role="button">Button</a></p>
+					</div>
+					</div>
+				</div>
+			</div>
+			<div class="col-sm-6 col-md-4">
+				<div class="thumbnail">
+					<img data-src="holder.js/300x200" alt="...">
+					<div class="caption">
+					<div class="simpleCart_shelfItem">
+						<h3>BroDog</h3>
+						<span class="item_price">$109.99</span>
+						<p><a href="javascript:;" class="btn btn-sm btn-primary item_add"> Add to Cart </a> <a href="#" class="btn btn-default" role="button">Button</a></p>
+					</div>
+					</div>
+				</div>
+			</div>
+		</div>
 	<div class="row marketing">
 		<div class="col-lg-6">
 			<div class="simpleCart_shelfItem">
@@ -68,44 +121,7 @@ echo $layout->loadNarrowNav('Home', '');
 			</div>
 		</div>
 	</div>
-	<div class="row">
-			<div class="col-sm-6 col-md-4">
-				<div class="thumbnail">
-					<img data-src="holder.js/300x200" alt="...">
-					<div class="caption">
-					<div class="simpleCart_shelfItem">
-						<h3>CoolDog</h3>
-						<span class="item_price">$49.99</span>
-						<p><a href="javascript:;" class="btn btn-sm btn-primary item_add"> Add to Cart </a> <a href="#" class="btn btn-default" role="button">Button</a></p>
-					</div>
-					</div>
-				</div>
-			</div>
-			<div class="col-sm-6 col-md-4">
-				<div class="thumbnail">
-					<img data-src="holder.js/300x200" alt="...">
-					<div class="caption">
-					<div class="simpleCart_shelfItem">
-						<h3>Dawg</h3>
-						<span class="item_price">$409.99</span>
-						<p><a href="javascript:;" class="btn btn-sm btn-primary item_add"> Add to Cart </a> <a href="#" class="btn btn-default" role="button">Button</a></p>
-					</div>
-					</div>
-				</div>
-			</div>
-			<div class="col-sm-6 col-md-4">
-				<div class="thumbnail">
-					<img data-src="holder.js/300x200" alt="...">
-					<div class="caption">
-					<div class="simpleCart_shelfItem">
-						<h3>BroDog</h3>
-						<span class="item_price">$109.99</span>
-						<p><a href="javascript:;" class="btn btn-sm btn-primary item_add"> Add to Cart </a> <a href="#" class="btn btn-default" role="button">Button</a></p>
-					</div>
-					</div>
-				</div>
-			</div>
-		</div>
+	
 	<!--push div to push the footer down-->
 	<div id="push"></div>
 	</div>
@@ -113,6 +129,4 @@ echo $layout->loadNarrowNav('Home', '');
 <?php	  
 echo $layout->loadFooter('');
 ?>
-<script src="bootstrap/dist/js/simpleCart.js"></script>
-
 </html>

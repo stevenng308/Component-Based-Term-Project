@@ -80,13 +80,21 @@ class Layout
 			{
 				$links = '<li class="active"><a href="index.php">Home</a></li>
 					<li><a href="#">About</a></li>
-					<li><a href="login.php">Sign-In</a></li>';
+					<li><a href="login.php">Sign-In</a></li>
+					<li class="active"><a href="#" data-container="body" data-toggle="popover" 
+					data-placement="bottom" data-content="" data-original-title="" title="">
+					<span class="badge"><span class="simpleCart_quantity"></span></span> Items - <span class="simpleCart_total"></span>&nbsp;<span class="glyphicon glyphicon-shopping-cart"></span>
+					</a></li>';
 			}
 			else
 			{
 				$links = '<li class="active"><a href="index.php">Home</a></li>
 					<li><a href="#">About</a></li>
-					<li><a href="classes/logout.php">Sign-Out</a></li>';
+					<li><a href="classes/logout.php">Sign-Out</a></li>
+					<li class="active"><a href="#" data-container="body" data-toggle="popover" 
+					data-placement="bottom" data-content="" data-original-title="" title="">
+					<span class="badge"><span class="simpleCart_quantity"></span></span> Items - <span class="simpleCart_total"></span>&nbsp;<span class="glyphicon glyphicon-shopping-cart"></span>
+					</a></li>';
 			}
 		}
 		else if ($title == "Login")
@@ -95,13 +103,21 @@ class Layout
 			{
 				$links = '<li><a href="index.php">Home</a></li>
 					<li><a href="#">About</a></li>
-					<li class="active"><a href="login.php">Sign-In</a></li>';
+					<li class="active"><a href="login.php">Sign-In</a></li>
+					<li class="active"><a href="#" data-container="body" data-toggle="popover" 
+					data-placement="bottom" data-content="" data-original-title="" title="">
+					<span class="badge"><span class="simpleCart_quantity"></span></span> Items - <span class="simpleCart_total"></span>&nbsp;<span class="glyphicon glyphicon-shopping-cart"></span>
+					</a></li>';
 			}
 			else
 			{
 				$links = '<li><a href="index.php">Home</a></li>
 					<li><a href="#">About</a></li>
-					<li class="active"><a href="classes/logout.php">Sign-Out</a></li>';
+					<li class="active"><a href="classes/logout.php">Sign-Out</a></li>
+					<li class="active"><a href="#" data-container="body" data-toggle="popover" 
+					data-placement="bottom" data-content="" data-original-title="" title="">
+					<span class="badge"><span class="simpleCart_quantity"></span></span> Items - <span class="simpleCart_total"></span>&nbsp;<span class="glyphicon glyphicon-shopping-cart"></span>
+					</a></li>';
 			}
 			
 		}
@@ -111,13 +127,21 @@ class Layout
 			{
 				$links = '<li><a href="index.php">Home</a></li>
 					<li><a href="#">About</a></li>
-					<li><a href="login.php">Sign-In</a></li>';
+					<li><a href="login.php">Sign-In</a></li>
+					<li class="active"><a href="#" data-container="body" data-toggle="popover" 
+					data-placement="bottom" data-content="" data-original-title="" title="">
+					<span class="badge"><span class="simpleCart_quantity"></span></span> Items - <span class="simpleCart_total"></span>&nbsp;<span class="glyphicon glyphicon-shopping-cart"></span>
+					</a></li>';
 			}
 			else
 			{
 				$links = '<li><a href="index.php">Home</a></li>
 					<li><a href="#">About</a></li>
-					<li><a href="classes/logout.php">Sign-Out</a></li>';
+					<li><a href="classes/logout.php">Sign-Out</a></li>
+					<li class="active"><a href="#" data-container="body" data-toggle="popover" 
+					data-placement="bottom" data-content="" data-original-title="" title="">
+					<span class="badge"><span class="simpleCart_quantity"></span></span> Items - <span class="simpleCart_total"></span>&nbsp;<span class="glyphicon glyphicon-shopping-cart"></span>
+					</a></li>';
 			}
 			
 		}
@@ -167,6 +191,8 @@ class Layout
 		<!-- Placed at the end of the document so the pages load faster -->
 		<script src="'. $dir .'bootstrap/assets/js/jquery.js"></script>
 		<script src="'. $dir .'bootstrap/dist/js/bootstrap.min.js"></script>
+		<script src="'. $dir .'bootstrap/dist/js/simpleCart.js"></script>
+		<script src="'. $dir .'bootstrap/dist/js/popover.js"></script>
 		</body>';
 		
 		return $func;
