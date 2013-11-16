@@ -42,6 +42,12 @@ echo $layout->loadNarrowNav('Home', '');
 		</div>
 		';
 	}
+	else
+	{
+		echo '<div class="page-header">
+			<h1 align="center">Welcome to Paws For A Cause!</h1>
+			</div>';
+	}
 ?>
 	<div class="row">
 			<div class="col-sm-6 col-md-4">
@@ -62,7 +68,7 @@ echo $layout->loadNarrowNav('Home', '');
 					<div class="caption">
 					<div class="simpleCart_shelfItem">
 						<h3 class="item_name">Dawg
-						<span class="item_price">$409.99</span></h3><span class="label label-danger">SpicyDog</span>
+						<span class="item_price">$649.99</span></h3><span class="label label-danger">YoDawg</span>
 						<p><a href="javascript:;" class="btn btn-sm btn-primary item_add"> Add to Cart </a> <a href="#" class="btn btn-default" role="button">Button</a></p>
 					</div>
 					</div>
@@ -74,14 +80,54 @@ echo $layout->loadNarrowNav('Home', '');
 					<div class="caption">
 					<div class="simpleCart_shelfItem">
 						<h3 class="item_name">BroDog
-						<span class="item_price">$109.99</span></h3>
+						<span class="item_price">$249.99</span></h3><span class="label label-default">Densuke...</span>
 						<p><a href="javascript:;" class="btn btn-sm btn-primary item_add"> Add to Cart </a> <a href="#" class="btn btn-default" role="button">Button</a></p>
 					</div>
 					</div>
 				</div>
 			</div>
 		</div>
-	<div class="row marketing">
+		<br />
+		<div class="row">
+			<div class="col-sm-6 col-md-4">
+				<div class="thumbnail">
+					<img src="images/ein.jpg" alt="Akita">
+					<div class="caption">
+					<div class="simpleCart_shelfItem">
+						<h3 class="item_name">iDog
+						<span class="item_price">$299.99</span></h3><span class="label label-warning">SmartPuppy</span>
+						<p><a href="javascript:;" class="btn btn-sm btn-primary item_add"> Add to Cart </a> <a href="#" class="btn btn-default" role="button">Button</a></p>
+					</div>
+					</div>
+				</div>
+			</div>
+			<div class="col-sm-6 col-md-4">
+				<div class="thumbnail">
+					<img src="images/kraken.jpg" alt="lobster">
+					<div class="caption">
+					<div class="simpleCart_shelfItem">
+						<h3 class="item_name">LobsterCorgi
+						<span class="item_price">$199.99</span></h3><span class="label label-danger">SpicyDog</span>
+						<p><a href="javascript:;" class="btn btn-sm btn-primary item_add"> Add to Cart </a> <a href="#" class="btn btn-default" role="button">Button</a></p>
+					</div>
+					</div>
+				</div>
+			</div>
+			<div class="col-sm-6 col-md-4">
+				<div class="thumbnail">
+					<img src="images/catdog.jpg" alt="dogcat">
+					<div class="caption">
+					<div class="simpleCart_shelfItem">
+						<h3 class="item_name">CatDog
+						<span class="item_price">$109.99</span></h3><span class="label label-warning">FreeCat</span>
+						<p><a href="javascript:;" class="btn btn-sm btn-primary item_add"> Add to Cart </a> <a href="#" class="btn btn-default" role="button">Button</a></p>
+					</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+	<!--<div class="row marketing">
 		<div class="col-lg-6">
 			<div class="simpleCart_shelfItem">
 				<h3 class="item_name">Dog <span class="item_price">$35.99</span></h3>
@@ -120,7 +166,8 @@ echo $layout->loadNarrowNav('Home', '');
 				<a href="javascript:;" class="btn btn-sm btn-primary item_add"> Add to Cart </a>
 			</div>
 		</div>
-	</div>
+
+	</div>-->
 	
 	<!--push div to push the footer down-->
 	<div id="push"></div>
