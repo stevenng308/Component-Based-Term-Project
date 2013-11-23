@@ -1,3 +1,6 @@
+<!-- Paws For A Cause -->
+<!-- Author: Jestin Keaton -->
+<!-- email_newsletter_signup.php -->
 
 <!DOCTYPE html>
 <html dir="ltr">
