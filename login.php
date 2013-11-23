@@ -29,7 +29,9 @@ echo $layout->loadNarrowNav('Login', '');
 	</form>
 	<?php
 		ob_start();
-		session_start();
+		if(!isset($_SESSION)){
+			session_start();
+		}
 		if (isset($_POST['submit'])) 
 		{
 			if (empty($_POST['email']) || empty($_POST['password']))
