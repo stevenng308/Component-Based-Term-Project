@@ -73,9 +73,6 @@ class Layout
 	
 	public function loadNarrowNav($title, $dir)
 	{
-		if(!isset($_SESSION)){
-			session_start();
-		}
 		if ($title == "Home")
 		{
 		

@@ -9,7 +9,9 @@
 require_once '\AutoLoader.php';
 spl_autoload_register(array('AutoLoader', 'autoLoad'));
 
-session_start();
+if(!isset($_SESSION)){
+	session_start();
+}
 $layout = new Layout();
 $loggedIn = false;
 if(!isset($_SESSION['sess_user_id']) || (trim($_SESSION['sess_user_id']) == '')) 
