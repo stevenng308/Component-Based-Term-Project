@@ -664,7 +664,7 @@
 
 <br>
 
-<div class="submit_container">
+<div class="submit_container" align="center">
 <input type="submit" class="button" name="submit" value="Subscribe to list">
 </div>
 </form>

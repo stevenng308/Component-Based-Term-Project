@@ -3,10 +3,10 @@
 //Author: Steven Ng forked from Yaw Agyepong
 class Database
 {
-	private $dbHOST = "localhost";
-    private $dbUSER = "root";
-    private $dbPASS = "";//"cselab29";
-    private $dbNAME = "paws";
+	$mysql_host = "mysql15.000webhost.com";
+	$mysql_database = "a8595582_paws";
+	$mysql_user = "a8595582_paws";
+	$mysql_password = "popcorn1";
     private $db_connection;
 	
 	public function __construct() {
