@@ -46,7 +46,12 @@ echo $layout->loadNarrowNav('Adopt', '');
 	{
 		echo '<div class="page-header">
 			<h1 align="center">Welcome to Paws For A Cause!</h1>
-			</div>';
+			</div>
+			<div align="center">
+			<iframe width="560" height="315" src="//www.youtube.com/embed/uORygjlWQYE?list=PL-Fu5OO4vL-LfqC-Ri-KNKmUcKUyM1F2E" frameborder="0" allowfullscreen></iframe>
+			</div>
+			&nbsp;
+			';
 	}
 ?>
 	<div class="row">
