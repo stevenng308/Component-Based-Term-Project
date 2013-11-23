@@ -1,0 +1,38 @@
+simplecartjs code:
+
+displaying # items in the cart
+<span class="simpleCart_quantity"></span></span>
+
+displaying total price
+<span class="simpleCart_total"></span>
+
+empty shopping cart
+<a href="javascript:;" class="btn btn-sm btn-danger simpleCart_empty">Empty Cart</a>
+
+checkout using paypal
+<a href="javascript:;" class="btn btn-sm btn-success simpleCart_checkout">Checkout</a>
+
+viewing shopping cart items
+<div class="simpleCart_items"></div>
+
+script to format and display the correct info about the items
+<script>
+	simpleCart({
+		//Setting the Cart Columns for the sidebar cart display.
+		cartColumns: [
+			{ attr: "image", label: false, view: "image"},
+			//Name of the item
+			{ attr: "name" , label: "Name" },
+			//Quantity displayed as an input
+			{ attr: "quantity", label: "Quantity", view: "input"},
+			//Built in view for a remove link
+			{ view:'remove', text: "Remove", label: false},
+			//Price of item
+			{ attr: "price", label: "Price"},
+			//Subtotal of that row (quantity of that item * the price)
+			{ attr: "total" , label: "Subtotal", view: "currency"  }
+		],
+		cartStyle: "table"
+	});
+	
+</script>

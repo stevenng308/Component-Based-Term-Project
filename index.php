@@ -44,131 +44,15 @@ echo $layout->loadNarrowNav('Home', '');
 	}
 	else
 	{
-		echo '<div class="page-header">
-			<h1 align="center">Welcome to Paws For A Cause!</h1>
-			</div>';
+		echo '<div class="jumbotron">
+			<h1>Welcome to<br /> Paws For A Cause!</h1>
+			<p class="lead">Thank you for registering. To view the list of companions that are looking for a new home and friend, please click the button below.</p>
+			<p><a class="btn btn-lg btn-success" href="adopt.php">Adopt Today</a></p>
+		</div>';
 	}
 ?>
-	<div class="row">
-			<div class="col-sm-6 col-md-4">
-				<div class="thumbnail">
-					<img src="images/akita.jpeg" alt="Akita">
-					<div class="caption">
-					<div class="simpleCart_shelfItem">
-						<h3 class="item_name">CoolDog
-						<span class="item_price">$49.99</span></h3><span class="label label-info">ChilliDog</span>
-						<p><a href="javascript:;" class="btn btn-sm btn-primary item_add"> Add to Cart </a> <a href="#" class="btn btn-default" role="button">Button</a></p>
-					</div>
-					</div>
-				</div>
-			</div>
-			<div class="col-sm-6 col-md-4">
-				<div class="thumbnail">
-					<img src="images/shiba.jpg" alt="Shiba Inuko">
-					<div class="caption">
-					<div class="simpleCart_shelfItem">
-						<h3 class="item_name">Dawg
-						<span class="item_price">$649.99</span></h3><span class="label label-danger">YoDawg</span>
-						<p><a href="javascript:;" class="btn btn-sm btn-primary item_add"> Add to Cart </a> <a href="#" class="btn btn-default" role="button">Button</a></p>
-					</div>
-					</div>
-				</div>
-			</div>
-			<div class="col-sm-6 col-md-4">
-				<div class="thumbnail">
-					<img src="images/densuke.png" alt="Densuke ;_;">
-					<div class="caption">
-					<div class="simpleCart_shelfItem">
-						<h3 class="item_name">BroDog
-						<span class="item_price">$249.99</span></h3><span class="label label-default">Densuke...</span>
-						<p><a href="javascript:;" class="btn btn-sm btn-primary item_add"> Add to Cart </a> <a href="#" class="btn btn-default" role="button">Button</a></p>
-					</div>
-					</div>
-				</div>
-			</div>
-		</div>
-		<br />
-		<div class="row">
-			<div class="col-sm-6 col-md-4">
-				<div class="thumbnail">
-					<img src="images/ein.jpg" alt="Akita">
-					<div class="caption">
-					<div class="simpleCart_shelfItem">
-						<h3 class="item_name">iDog
-						<span class="item_price">$299.99</span></h3><span class="label label-warning">SmartPuppy</span>
-						<p><a href="javascript:;" class="btn btn-sm btn-primary item_add"> Add to Cart </a> <a href="#" class="btn btn-default" role="button">Button</a></p>
-					</div>
-					</div>
-				</div>
-			</div>
-			<div class="col-sm-6 col-md-4">
-				<div class="thumbnail">
-					<img src="images/kraken.jpg" alt="lobster">
-					<div class="caption">
-					<div class="simpleCart_shelfItem">
-						<h3 class="item_name">LobsterCorgi
-						<span class="item_price">$199.99</span></h3><span class="label label-danger">SpicyDog</span>
-						<p><a href="javascript:;" class="btn btn-sm btn-primary item_add"> Add to Cart </a> <a href="#" class="btn btn-default" role="button">Button</a></p>
-					</div>
-					</div>
-				</div>
-			</div>
-			<div class="col-sm-6 col-md-4">
-				<div class="thumbnail">
-					<img src="images/catdog.jpg" alt="dogcat">
-					<div class="caption">
-					<div class="simpleCart_shelfItem">
-						<h3 class="item_name">CatDog
-						<span class="item_price">$109.99</span></h3><span class="label label-warning">FreeCat</span>
-						<p><a href="javascript:;" class="btn btn-sm btn-primary item_add"> Add to Cart </a> <a href="#" class="btn btn-default" role="button">Button</a></p>
-					</div>
-					</div>
-				</div>
-			</div>
-		</div>
-		
-	<!--<div class="row marketing">
-		<div class="col-lg-6">
-			<div class="simpleCart_shelfItem">
-				<h3 class="item_name">Dog <span class="item_price">$35.99</span></h3>
-
-				<a href="javascript:;" class="btn btn-sm btn-primary item_add"> Add to Cart </a>
-			</div>
-			<div class="simpleCart_shelfItem">
-				<h3 class="item_name">A Dog <span class="item_price">$13.99</span></h3>
-
-				<a href="javascript:;" class="btn btn-sm btn-primary item_add"> Add to Cart </a>
-			</div>
-
-			<div class="simpleCart_shelfItem">
-				<h3 class="item_name">The Dog <span class="item_price">$0.99</span></h3>
-
-				<a href="javascript:;" class="btn btn-sm btn-primary item_add"> Add to Cart </a>
-			</div>
-		</div>
-
-		<div class="col-lg-6">
-			<div class="simpleCart_shelfItem">
-				<h3 class="item_name">iDog <span class="item_price">$149.99</span></h3>
-
-				<a href="javascript:;" class="btn btn-sm btn-primary item_add"> Add to Cart </a>
-			</div>
-
-			<div class="simpleCart_shelfItem">
-				<h3 class="item_name">myDog <span class="item_price">$3.99</span></h3>
-
-				<a href="javascript:;" class="btn btn-sm btn-primary item_add"> Add to Cart </a>
-			</div>
-
-			<div class="simpleCart_shelfItem">
-				<h3 class="item_name">CatDog <span class="item_price">$509.99</span> <span class="label label-danger">HotDog</span></h3>
-
-				<a href="javascript:;" class="btn btn-sm btn-primary item_add"> Add to Cart </a>
-			</div>
-		</div>
-
-	</div>-->
-	
+	<div id="content" align="center">
+	</div>
 	<!--push div to push the footer down-->
 	<div id="push"></div>
 	</div>
@@ -176,4 +60,5 @@ echo $layout->loadNarrowNav('Home', '');
 <?php	  
 echo $layout->loadFooter('');
 ?>
+<script src="bootstrap/dist/js/loadphp.js"></script>
 </html>

@@ -1,5 +1,5 @@
 <?php
-//Class handlign Database connection and querying it
+//Class handling Database connection and querying it
 //Author: Steven Ng forked from Yaw Agyepong
 class Database
 {

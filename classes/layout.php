@@ -80,7 +80,7 @@ class Layout
 			if(!isset($_SESSION['sess_user_id']) || (trim($_SESSION['sess_user_id']) == '')) 
 			{
 				$links = '<li class="active"><a href="index.php">Home</a></li>
-					<li><a href="#">Adopt</a></li>
+					<li><a href="adopt.php">Adopt</a></li>
 					<li><a href="login.php">Sign-In</a></li>
 					<li class="active"><a href="#" data-container="body" data-toggle="popover" 
 					data-placement="bottom" data-content="" data-original-title="" title="">
@@ -90,7 +90,7 @@ class Layout
 			else
 			{
 				$links = '<li class="active"><a href="index.php">Home</a></li>
-					<li><a href="#">Adopt</a></li>
+					<li><a href="adopt.php">Adopt</a></li>
 					<li><a href="classes/logout.php">Sign-Out</a></li>
 					<li class="active"><a href="#" data-container="body" data-toggle="popover" 
 					data-placement="bottom" data-content="" data-original-title="" title="">
@@ -103,7 +103,7 @@ class Layout
 			if(!isset($_SESSION['sess_user_id']) || (trim($_SESSION['sess_user_id']) == '')) 
 			{
 				$links = '<li><a href="index.php">Home</a></li>
-					<li><a href="#">Adopt</a></li>
+					<li><a href="adopt.php">Adopt</a></li>
 					<li class="active"><a href="login.php">Sign-In</a></li>
 					<li class="active"><a href="#" data-container="body" data-toggle="popover" 
 					data-placement="bottom" data-content="" data-original-title="" title="">
@@ -113,7 +113,7 @@ class Layout
 			else
 			{
 				$links = '<li><a href="index.php">Home</a></li>
-					<li><a href="#">Adopt</a></li>
+					<li><a href="adopt.php">Adopt</a></li>
 					<li class="active"><a href="classes/logout.php">Sign-Out</a></li>
 					<li class="active"><a href="#" data-container="body" data-toggle="popover" 
 					data-placement="bottom" data-content="" data-original-title="" title="">
@@ -127,7 +127,7 @@ class Layout
 			if(!isset($_SESSION['sess_user_id']) || (trim($_SESSION['sess_user_id']) == '')) 
 			{
 				$links = '<li><a href="index.php">Home</a></li>
-					<li><a href="#">Adopt</a></li>
+					<li class="active"><a href="adopt.php">Adopt</a></li>
 					<li><a href="login.php">Sign-In</a></li>
 					<li class="active"><a href="#" data-container="body" data-toggle="popover" 
 					data-placement="bottom" data-content="" data-original-title="" title="">
@@ -137,7 +137,7 @@ class Layout
 			else
 			{
 				$links = '<li><a href="index.php">Home</a></li>
-					<li><a href="#">Adopt</a></li>
+					<li class="active"><a href="adopt.php">Adopt</a></li>
 					<li><a href="classes/logout.php">Sign-Out</a></li>
 					<li class="active"><a href="#" data-container="body" data-toggle="popover" 
 					data-placement="bottom" data-content="" data-original-title="" title="">
