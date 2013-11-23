@@ -1,0 +1,28 @@
+Basically just pass a POST array to this address
+action="http://spsu.us3.list-manage.com/subscribe/post"
+
+Our form
+<form form name="signin" class="form-signin" action="http://spsu.us3.list-manage.com/subscribe/post" method="POST">
+		<input type="hidden" name="u" value="e5e48e8014302e574975e778b">
+		<input type="hidden" name="id" value="0fedd6c0f2">
+
+		<input type="email" class="form-control" name="MERGE0" id="MERGE0"  placeholder="Email address" autofocus>
+		<input type="text" class="form-control" name="MERGE1" id="MERGE1" placeholder="First Name" value="">
+
+		<input type="text" class="form-control" name="MERGE2" id="MERGE2" placeholder="Last Name" value="">
+
+		<strong>Preferred format</strong>
+			<div class="radio">
+			  <label>
+				<input type="radio" name="EMAILTYPE" id="EMAILTYPE_HTML" value="html" checked>
+				HTML
+			  </label>
+			</div>
+			<div class="radio">
+			  <label>
+				<input type="radio" name="EMAILTYPE" id="EMAILTYPE_TEXT" value="text">
+				TEXT
+			  </label>
+			</div>
+		<input type="submit" class="btn btn-lg btn-primary btn-block" name="submit" value="Subscribe to list">
+	</form>
