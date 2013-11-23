@@ -181,7 +181,7 @@ class Layout
 		$func = '
 		<div class="footer" id="footer">
 			
-			<p align="right">&copy; Steven Ng, Jestin Keaton, Zach Nelson 2013</p>
+			<p align="right"><a href="#">Code </a>&copy; Steven Ng, Jestin Keaton, Zach Nelson 2013</p>
 			
 		</div>
         </div> <!--/ container -->
