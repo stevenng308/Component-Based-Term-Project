@@ -1,7 +1,9 @@
 <?php
 //Logout function
 //Author: Steven Ng
-session_start();
+if(!isset($_SESSION)){
+	session_start();
+}
 session_destroy();
 echo '<div align="center">
 		<b>Signing-out successful!</b><br />
