@@ -54,17 +54,12 @@ echo $layout->loadNarrowNav('Home', '');
 	}
 ?>
 	<div align="center">
-		<iframe width="560" height="315" src="//www.youtube.com/embed/uORygjlWQYE?list=PL-Fu5OO4vL-LfqC-Ri-KNKmUcKUyM1F2E" frameborder="0" allowfullscreen></iframe>
+		<iframe width="560" height="315" src="//www.youtube.com/embed/uORygjlWQYE?list=PL_On2uzbBrcZEvw1To-Rv7gshsAb6CYsB" frameborder="0" allowfullscreen></iframe>
 	</div>
 	<div id="content" align="center">
 	</div>
 	<!--push div to push the footer down-->
 	<div id="push"></div>
-		<a href="https://www.facebook.com/pages/Paws-For-A-Cause/252178178270162" target="_blank"> <img src="images/link_FB.png" alt="HTML tutorial" width="70" height="30"></a>
-			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-		<a href="https://www.youtube.com/channel/UC3wyvPqbs_uBriosYLRctNA" target="_blank"> <img src="images/link_YT.png" alt="HTML tutorial" width="70" height="30"></a>
-			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-		<a href="https://twitter.com/Paws4ACause0" target="_blank"> <img src="images/link_Twitter.png" alt="HTML tutorial" width="70" height="30"></a>
 	</div>
 </div>
 <?php	  
