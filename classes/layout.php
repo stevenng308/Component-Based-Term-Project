@@ -228,7 +228,7 @@ class Layout
 				<ul class="nav nav-pills pull-right">
 				'. $links .'
 				</ul>
-				<h3 class="text-muted"><a href="index.php">Paws For A Cause</a></h3>
+				<h3 class="text-muted"><a href="index.php"><img src="images/logo.png" alt="Paws For A Cause" width="150" height="40"></a></h3>
 			</div>';
 			
 			return $func;
