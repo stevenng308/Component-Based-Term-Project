@@ -1,0 +1,17 @@
+create a new twitterOAuth object to handle the login
+$twitteroauth = new TwitterOAuth()
+
+direct user to twitter login site
+$twitteroauth->getAuthorizeURL($request_token['oauth_token']);
+
+twitter calls back using this and i get the user's info
+$twitteroauth->getRequestToken();
+
+get the twitter tokens
+$access_token = $twitteroauth->getAccessToken($_GET['oauth_verifier']);
+
+accessing the user's info
+$user_info = $twitteroauth->get('account/verify_credentials');
+
+http://stackoverflow.com/questions/14502411/why-is-my-twitter-oauth-access-token-invalid-expired
+http://net.tutsplus.com/tutorials/php/how-to-authenticate-users-with-twitter-oauth/

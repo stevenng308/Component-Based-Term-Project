@@ -38,13 +38,35 @@ class Database
 		//echo $salt;
 	}
 	
-	public function login($data)
+	public function twitterLogin($data, $token)
 	{	
-			session_regenerate_id();
-			$_SESSION['sess_user_id'] = $userData['id'];
-			$_SESSION['sess_username'] = $userData['username'];
-			session_write_close();
-			header('Location: index.php');
+		// Let's find the user by its ID
+		$query = mysql_query("SELECT * FROM users WHERE oauth_provider = 'twitter' AND oauth_uid = ". $data->id);
+		$result = mysql_fetch_array($query);
+
+		// If not, let's add it to the database
+		if(empty($result)){
+		//echo 'hello1';
+			$query = mysql_query("INSERT INTO users (oauth_provider, oauth_uid, username, oauth_token, oauth_secret) VALUES ('twitter', {$data->id}, '{$data->screen_name}', '{$token['oauth_token']}', '{$token['oauth_token_secret']}')");
+			$query = mysql_query("SELECT * FROM users WHERE id = " . mysql_insert_id());
+			$result = mysql_fetch_array($query);
+		} else {
+		//echo 'hello2';
+			// Update the tokens
+			$query = mysql_query("UPDATE users SET oauth_token = '{$token['oauth_token']}', oauth_secret = '{$token['oauth_token_secret']}' WHERE oauth_provider = 'twitter' AND oauth_uid = {$data->id}");
+		}
+
+		session_regenerate_id();
+		$_SESSION['sess_user_id'] = $result['id'];
+		$_SESSION['sess_username'] = $result['username'];
+		$_SESSION['oauth_uid'] = $result['oauth_uid'];
+		$_SESSION['oauth_provider'] = $result['oauth_provider'];
+		$_SESSION['oauth_token'] = $result['oauth_token'];
+		$_SESSION['oauth_secret'] = $result['oauth_secret'];
+		session_write_close();
+		
+		//echo $_SESSION['sess_user_id'];
+		header('Location: ../index.php');
 	}
 }
 ?>

@@ -220,6 +220,7 @@ class Layout
 
 				<!-- Custom styles for this template -->
 				<link href="'. $dir .'bootstrap/dist/css/jumbotron-narrow.css" rel="stylesheet">
+				<link href="'. $dir .'bootstrap/dist/css/background.css" rel="stylesheet">
 		
 		<body>
 
@@ -239,11 +240,11 @@ class Layout
 		$func = '
 		<div class="footer" id="footer">
 			<p align="left"></p>
-			<p align="right"><a href="https://www.facebook.com/pages/Paws-For-A-Cause/252178178270162" target="_blank"> <img src="images/link_FB.png" alt="HTML tutorial" width="50" height="15"></a>
+			<p align="right"><a href="https://www.facebook.com/pages/Paws-For-A-Cause/252178178270162" target="_blank"> <img src="images/link_FB.png" alt="Facebook Page" width="50" height="15"></a>
 			&emsp;
-			<a href="https://www.youtube.com/channel/UC3wyvPqbs_uBriosYLRctNA" target="_blank"> <img src="images/link_YT.png" alt="HTML tutorial" width="50" height="15"></a>
+			<a href="https://www.youtube.com/channel/UC3wyvPqbs_uBriosYLRctNA" target="_blank"> <img src="images/link_YT.png" alt="Youtube Channel" width="50" height="15"></a>
 			&emsp;
-			<a href="https://twitter.com/Paws4ACause0" target="_blank"> <img src="images/link_Twitter.png" alt="HTML tutorial" width="50" height="15"></a>
+			<a href="https://twitter.com/Paws4ACause0" target="_blank"> <img src="images/link_Twitter.png" alt="Twitter Feed" width="50" height="15"></a>
 			&emsp;
 			<a href="#">Code </a>&copy; Steven Ng, Jestin Keaton, Zach Nelson 2013</p>
 		</div>

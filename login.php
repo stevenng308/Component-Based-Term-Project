@@ -9,6 +9,7 @@ spl_autoload_register(array('AutoLoader', 'autoLoad'));
 
 $layout = new Layout();
 $database = new Database();
+// The TwitterOAuth instance
 
 echo $layout->loadNarrowNav('Login', '');
 ?>
@@ -24,7 +25,9 @@ echo $layout->loadNarrowNav('Login', '');
 			<label class="checkbox">
 				<input type="checkbox" value="remember-me"> Remember me
 			</label>
-			<button class="btn btn-lg btn-primary btn-block" type="submit" name="submit">Sign in</button>
+			<button class="btn btn-lg btn-primary btn-block" type="submit" name="submit">Sign in</button> 
+			<br />
+			<a href="twitterlogin.php" target="_blank"><img src="images/login_twitter.png" alt="Login with Twitter"></a>
 			<span class="help-block">Don't have an account? Click <a href="register.php">here</a> to register for one.</span>
 	</form>
 	<?php

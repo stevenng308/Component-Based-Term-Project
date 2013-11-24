@@ -12,7 +12,7 @@ class User {
             # User is already present
         } else {
             #user not present. Insert a new Record
-            $query = mysql_query("INSERT INTO `users` (oauth_provider, oauth_uid, username,email) VALUES ('$oauth_provider', $uid, '$username','$email')") or die(mysql_error());
+            $query = mysql_query("INSERT INTO `users` (oauth_provider, oauth_uid, username, email) VALUES ('$oauth_provider', $uid, '$username','$email')") or die(mysql_error());
             $query = mysql_query("SELECT * FROM `users` WHERE oauth_uid = '$uid' and oauth_provider = '$oauth_provider'");
             $result = mysql_fetch_array($query);
             return $result;
