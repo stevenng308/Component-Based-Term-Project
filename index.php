@@ -53,10 +53,10 @@ echo $layout->loadNarrowNav('Home', '');
 		</div>';
 	}
 ?>
-	<div align="center">
+	<div class="jumbotron">
 		<iframe width="560" height="315" src="//www.youtube.com/embed/uORygjlWQYE?list=PL_On2uzbBrcZEvw1To-Rv7gshsAb6CYsB" frameborder="0" allowfullscreen></iframe>
 	</div>
-	<div id="content" align="center">
+	<div class="jumbotron" id="content" align="center">
 	</div>
 	<!--push div to push the footer down-->
 	<div id="push"></div>
