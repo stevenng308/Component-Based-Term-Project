@@ -9,13 +9,6 @@ spl_autoload_register(array('AutoLoader', 'autoLoad'));
 
 $layout = new Layout();
 $database = new Database();
-/*($settings = array(
-    'oauth_access_token' => "2211183265-mwRk55hkEzsfhaCC2DNSMk052h791tAoSV08LhC",
-    'oauth_access_token_secret' => "lXTkcZtXU3hIdt4WWhiJOW8fKuddVeVYqC04HkKWYY",
-    'consumer_key' => "4NBWMyfoov3EsMscIBMiw",
-    'consumer_secret' => "GS28KcYBKwRitclxt2aP8S6DOCwZTrYpco2gWLc9oc"
-);
-$twitter = new TwitterAPIExchange($settings);*/
 
 echo $layout->loadNarrowNav('Login', '');
 ?>

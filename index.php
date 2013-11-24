@@ -53,6 +53,9 @@ echo $layout->loadNarrowNav('Home', '');
 		</div>';
 	}
 ?>
+	<div align="center">
+		<iframe width="560" height="315" src="//www.youtube.com/embed/uORygjlWQYE?list=PL-Fu5OO4vL-LfqC-Ri-KNKmUcKUyM1F2E" frameborder="0" allowfullscreen></iframe>
+	</div>
 	<div id="content" align="center">
 	</div>
 	<!--push div to push the footer down-->

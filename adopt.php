@@ -18,6 +18,7 @@ if(!isset($_SESSION['sess_user_id']) || (trim($_SESSION['sess_user_id']) == ''))
 {
 	$loggedIn = true;
 }
+
 echo $layout->loadNarrowNav('Adopt', '');
 ?>
 <!-- Custom styles for this page-->
