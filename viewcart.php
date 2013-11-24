@@ -60,8 +60,10 @@ echo $layout->loadNarrowNav('View Cart', '');
 		.item-subtotal{width:50px;}
 	</style>
 	<div class="simpleCart_items"></div>
+	<br>
 	<div align="right">
-		<a href="javascript:;" class="btn btn-lg btn-success simpleCart_checkout">Checkout</a>
+		<a href="javascript:;" class="btn btn-lg btn-danger simpleCart_empty">Empty Cart</a>
+		<a href="javascript:;" class="btn btn-lg btn-success" simpleCart_checkout">Checkout</a>
 	</div>
 	
 	<!--push div to push the footer down-->
@@ -75,7 +77,7 @@ echo $layout->loadFooter('');
 	simpleCart({
 		//Setting the Cart Columns for the sidebar cart display.
 		cartColumns: [
-			{ attr: "image", label: false, view: "image"},
+			//{ attr: "image", label: false, view: "image"},
 			//Name of the item
 			{ attr: "name" , label: "Name" },
 			//Quantity displayed as an input

@@ -66,7 +66,7 @@ echo $layout->loadNarrowNav('Adopt', '');
 						<span class="item_price">$49.99</span></h3>
 						<p>Cooldog is very cool and chill. The fluffy white coat will relax your anxieties away.</p>
 						<span class="label label-info">ChilliDog</span>
-						<p><a href="javascript:;" class="btn btn-sm btn-primary item_add"> Add to Cart </a> <a href="#" class="btn btn-default" role="button">Button</a></p>
+						<p><a href="javascript:;" class="btn btn-sm btn-primary item_add"> Add to Cart </a><!-- <a href="#" class="btn btn-default" role="button">Button</a>--></p>
 					</div>
 					</div>
 				</div>
@@ -80,7 +80,7 @@ echo $layout->loadNarrowNav('Adopt', '');
 						<span class="item_price">$649.99</span></h3>
 						<p>Dawg is rambunctious and always energetic. If you want to stay fit Dawg is the man.</p>
 						<span class="label label-danger">YoDawg</span>
-						<p><a href="javascript:;" class="btn btn-sm btn-primary item_add"> Add to Cart </a> <a href="#" class="btn btn-default" role="button">Button</a></p>
+						<p><a href="javascript:;" class="btn btn-sm btn-primary item_add"> Add to Cart </a></p>
 					</div>
 					</div>
 				</div>
@@ -94,7 +94,7 @@ echo $layout->loadNarrowNav('Adopt', '');
 						<span class="item_price">$249.99</span></h3>
 						<p>BroDog is a bit quirky and won't win any contests, but he is your best friend no matter who you are. He is will be your wingman through thick or thin.</p>
 						<span class="label label-default">Densuke...</span>
-						<p><a href="javascript:;" class="btn btn-sm btn-primary item_add"> Add to Cart </a> <a href="#" class="btn btn-default" role="button">Button</a></p>
+						<p><a href="javascript:;" class="btn btn-sm btn-primary item_add"> Add to Cart </a></p>
 					</div>
 					</div>
 				</div>
@@ -111,7 +111,7 @@ echo $layout->loadNarrowNav('Adopt', '');
 						<span class="item_price">$299.99</span></h3>
 						<p>iDog is quiet and enigmatic. He can play a mean game of chess. Might have dangerous men coming for him.</p>
 						<span class="label label-warning">SmartPuppy</span>
-						<p><a href="javascript:;" class="btn btn-sm btn-primary item_add"> Add to Cart </a> <a href="#" class="btn btn-default" role="button">Button</a></p>
+						<p><a href="javascript:;" class="btn btn-sm btn-primary item_add"> Add to Cart </a></p>
 					</div>
 					</div>
 				</div>
@@ -125,7 +125,7 @@ echo $layout->loadNarrowNav('Adopt', '');
 						<span class="item_price">$199.99</span></h3>
 						<p>A Corgi in a lobster costume.</p>
 						<span class="label label-danger">SpicyDog</span>
-						<p><a href="javascript:;" class="btn btn-sm btn-primary item_add"> Add to Cart </a> <a href="#" class="btn btn-default" role="button">Button</a></p>
+						<p><a href="javascript:;" class="btn btn-sm btn-primary item_add"> Add to Cart </a></p>
 					</div>
 					</div>
 				</div>
@@ -139,7 +139,7 @@ echo $layout->loadNarrowNav('Adopt', '');
 						<span class="item_price">$109.99</span></h3>
 						<p>Dog is a hyper and energetic dog. Can cough up furballs. Comes with a free cat.</p>
 						<span class="label label-warning">FreeCat</span>
-						<p><a href="javascript:;" class="btn btn-sm btn-primary item_add"> Add to Cart </a> <a href="#" class="btn btn-default" role="button">Button</a></p>
+						<p><a href="javascript:;" class="btn btn-sm btn-primary item_add"> Add to Cart </a></p>
 					</div>
 					</div>
 				</div>
