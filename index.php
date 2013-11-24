@@ -60,6 +60,11 @@ echo $layout->loadNarrowNav('Home', '');
 	</div>
 	<!--push div to push the footer down-->
 	<div id="push"></div>
+		<a href="https://www.facebook.com/pages/Paws-For-A-Cause/252178178270162" target="_blank"> <img src="images/link_FB.png" alt="HTML tutorial" width="70" height="30"></a>
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		<a href="https://www.youtube.com/channel/UC3wyvPqbs_uBriosYLRctNA" target="_blank"> <img src="images/link_YT.png" alt="HTML tutorial" width="70" height="30"></a>
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		<a href="https://twitter.com/Paws4ACause0" target="_blank"> <img src="images/link_Twitter.png" alt="HTML tutorial" width="70" height="30"></a>
 	</div>
 </div>
 <?php	  

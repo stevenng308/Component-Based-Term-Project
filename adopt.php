@@ -24,6 +24,7 @@ echo $layout->loadNarrowNav('Adopt', '');
 <!-- Custom styles for this page-->
 <link href="bootstrap/dist/css/jumbotron-narrow.css" rel="stylesheet">
 <div class="container">
+
 	<div id="wrap"> <!-- wraps the main div in its own section so it stays where it needs to be-->
 	<!--<div align="right">
 		<span class="badge"><span class="simpleCart_quantity"></span></span><strong> items - <span class="simpleCart_total"></span></strong><br />
@@ -57,6 +58,7 @@ echo $layout->loadNarrowNav('Adopt', '');
 			';
 	}
 ?>
+
 	<div class="row">
 			<div class="col-sm-6 col-md-4">
 				<div class="thumbnail">
@@ -67,7 +69,7 @@ echo $layout->loadNarrowNav('Adopt', '');
 						<span class="item_price">$49.99</span></h3>
 						<p>Cooldog is very cool and chill. The fluffy white coat will relax your anxieties away.</p>
 						<span class="label label-info">ChilliDog</span>
-						<p><a href="javascript:;" class="btn btn-sm btn-primary item_add"> Add to Cart </a><!-- <a href="#" class="btn btn-default" role="button">Button</a>--></p>
+						<p><a href="javascript:;" class="btn btn-sm btn-primary item_add"> Add to Cart </a> <a href="#" class="btn btn-default" role="button">Button</a></p>
 					</div>
 					</div>
 				</div>
@@ -81,7 +83,7 @@ echo $layout->loadNarrowNav('Adopt', '');
 						<span class="item_price">$649.99</span></h3>
 						<p>Dawg is rambunctious and always energetic. If you want to stay fit Dawg is the man.</p>
 						<span class="label label-danger">YoDawg</span>
-						<p><a href="javascript:;" class="btn btn-sm btn-primary item_add"> Add to Cart </a></p>
+						<p><a href="javascript:;" class="btn btn-sm btn-primary item_add"> Add to Cart </a> <a href="#" class="btn btn-default" role="button">Button</a></p>
 					</div>
 					</div>
 				</div>
@@ -95,7 +97,7 @@ echo $layout->loadNarrowNav('Adopt', '');
 						<span class="item_price">$249.99</span></h3>
 						<p>BroDog is a bit quirky and won't win any contests, but he is your best friend no matter who you are. He is will be your wingman through thick or thin.</p>
 						<span class="label label-default">Densuke...</span>
-						<p><a href="javascript:;" class="btn btn-sm btn-primary item_add"> Add to Cart </a></p>
+						<p><a href="javascript:;" class="btn btn-sm btn-primary item_add"> Add to Cart </a> <a href="#" class="btn btn-default" role="button">Button</a></p>
 					</div>
 					</div>
 				</div>
@@ -112,7 +114,7 @@ echo $layout->loadNarrowNav('Adopt', '');
 						<span class="item_price">$299.99</span></h3>
 						<p>iDog is quiet and enigmatic. He can play a mean game of chess. Might have dangerous men coming for him.</p>
 						<span class="label label-warning">SmartPuppy</span>
-						<p><a href="javascript:;" class="btn btn-sm btn-primary item_add"> Add to Cart </a></p>
+						<p><a href="javascript:;" class="btn btn-sm btn-primary item_add"> Add to Cart </a> <a href="#" class="btn btn-default" role="button">Button</a></p>
 					</div>
 					</div>
 				</div>
@@ -126,7 +128,7 @@ echo $layout->loadNarrowNav('Adopt', '');
 						<span class="item_price">$199.99</span></h3>
 						<p>A Corgi in a lobster costume.</p>
 						<span class="label label-danger">SpicyDog</span>
-						<p><a href="javascript:;" class="btn btn-sm btn-primary item_add"> Add to Cart </a></p>
+						<p><a href="javascript:;" class="btn btn-sm btn-primary item_add"> Add to Cart </a> <a href="#" class="btn btn-default" role="button">Button</a></p>
 					</div>
 					</div>
 				</div>
@@ -140,7 +142,7 @@ echo $layout->loadNarrowNav('Adopt', '');
 						<span class="item_price">$109.99</span></h3>
 						<p>Dog is a hyper and energetic dog. Can cough up furballs. Comes with a free cat.</p>
 						<span class="label label-warning">FreeCat</span>
-						<p><a href="javascript:;" class="btn btn-sm btn-primary item_add"> Add to Cart </a></p>
+						<p><a href="javascript:;" class="btn btn-sm btn-primary item_add"> Add to Cart </a> <a href="#" class="btn btn-default" role="button">Button</a></p>
 					</div>
 					</div>
 				</div>
@@ -191,6 +193,11 @@ echo $layout->loadNarrowNav('Adopt', '');
 	
 	<!--push div to push the footer down-->
 	<div id="push"></div>
+		<a href="https://www.facebook.com/pages/Paws-For-A-Cause/252178178270162" target="_blank"> <img src="images/link_FB.png" alt="HTML tutorial" width="70" height="30"></a>
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		<a href="https://www.youtube.com/channel/UC3wyvPqbs_uBriosYLRctNA" target="_blank"> <img src="images/link_YT.png" alt="HTML tutorial" width="70" height="30"></a>
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		<a href="https://twitter.com/Paws4ACause0" target="_blank"> <img src="images/link_Twitter.png" alt="HTML tutorial" width="70" height="30"></a>
 	</div>
 </div>
 <?php	  
