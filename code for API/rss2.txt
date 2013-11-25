@@ -3,6 +3,4 @@ rss feed code:
 displaying the rss feed from another site
 rss2html/rss2html.php?XMLFILE=http://rss.animalnetwork.com/dogchannel/Dog-Adoption-Information.rss
 
-jquery ajax call to load another php file into an html div tag
-$(document).ready(function(){ $("#content").load("rss2html/rss2html.php?XMLFILE=http://rss.animalnetwork.com/dogchannel/Dog-Adoption-Information.rss");
-});
+jquery

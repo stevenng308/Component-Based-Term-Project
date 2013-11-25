@@ -5538,6 +5538,24 @@ a.list-group-item:focus {
   border-bottom-color: #bce8f1;
 }
 
+.panel-royal {
+  border-color: #862d86;
+}
+
+.panel-royal > .panel-heading {
+  color: #FFFFFF;
+  background-color: #993399;
+  border-color: #862d86;
+}
+
+.panel-royal > .panel-heading + .panel-collapse .panel-body {
+  border-top-color: #862d86;
+}
+
+.panel-royal > .panel-footer + .panel-collapse .panel-body {
+  border-bottom-color: #862d86;
+}
+
 .well {
   min-height: 20px;
   padding: 19px;
