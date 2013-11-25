@@ -2,9 +2,10 @@
 <!-- Author: Steven Ng -->
 <!-- login -->
 
-<html>
+<html xmlns:fb="http://www.facebook.com/2008/fbml">
 <?php
 require_once '\AutoLoader.php';
+require 'facebook-php-sdk-master/facebook-php-sdk-master/src/facebook.php';
 spl_autoload_register(array('AutoLoader', 'autoLoad'));
 
 $layout = new Layout();
@@ -12,6 +13,33 @@ $database = new Database();
 // The TwitterOAuth instance
 
 echo $layout->loadNarrowNav('Login', '');
+
+// Added for Facebook functionality
+$facebook = new Facebook(array(
+  'appId'  => '675454145821609',
+  'secret' => '7c48be141987557485d00052b1b7ed55',
+));
+$user = $facebook->getUser();
+$access_token = $facebook->getAccessToken();
+if ($user){
+	try {
+		// Proceed knowing you have a logged in user who's authenticated.
+		$user_profile = $facebook->api('/me');
+	}	 
+	catch (FacebookApiException $e) {
+		error_log($e);
+		$user = null;
+	}
+}
+if ($user) {
+	$params = array( 'next' => 'http://ngine.dyndns.org/' );
+	$logoutUrl = $facebook->getLogoutUrl($params);
+} else {
+	$statusUrl = $facebook->getLoginStatusUrl();
+	$loginUrl = $facebook->getLoginUrl(array("scope" => "email"));
+}
+// end of fb stuff
+
 ?>
 <!-- Custom styles for this template -->
 <link href="bootstrap/dist/css/signin.css" rel="stylesheet">
@@ -28,15 +56,34 @@ echo $layout->loadNarrowNav('Login', '');
 			<button class="btn btn-lg btn-primary btn-block" type="submit" name="submit">Sign in</button> 
 			<br />
 			<a href="twitterlogin.php" target="_blank"><img src="images/login_twitter.png" alt="Login with Twitter"></a>
+			<a href="fblogin.php"><img src="images/login_fb.png" alt="Login with Twitter"></a>
 			<span class="help-block">Don't have an account? Click <a href="register.php">here</a> to register for one.</span>
 	</form>
+	
 	<?php
 		ob_start();
 		if(!isset($_SESSION)){
 			session_start();
 		}
-		if (isset($_POST['submit'])) 
+		if (isset($_POST['submit']) || $user) 
 		{
+			if($user){
+				// Added facebook check to see if the current user is already in the database
+				$email1 = ($user_profile['first_name']+$user_profile['last_name']+"@"+$user_profile['id']);
+				$query_initial = "SELECT id, firstname, lastname, password, email, salt FROM member WHERE email = '$email1';";
+				$result_initial = mysql_query($query_initial);
+				
+				if(mysql_num_rows($result_initial) != 0){
+					$userData = mysql_fetch_array($result_initial, MYSQL_ASSOC);
+					session_regenerate_id();
+					$_SESSION['sess_user_id'] = $userData['id'];
+					$_SESSION['sess_username'] = ($userData['firstname']+" "+$userData['lastname']);
+					session_write_close();
+					header('Location: index.php');
+				}
+			}
+			
+			
 			if (empty($_POST['email']) || empty($_POST['password']))
 			{
 				//echo $str;
@@ -79,7 +126,7 @@ echo $layout->loadNarrowNav('Login', '');
 				//$database->login($userData);
 				session_regenerate_id();
 				$_SESSION['sess_user_id'] = $userData['id'];
-				$_SESSION['sess_username'] = $userData['username'];
+				$_SESSION['sess_username'] = $userData['firstname']. " ". $userData['lastname'];
 				session_write_close();
 				header('Location: index.php');
 			}
