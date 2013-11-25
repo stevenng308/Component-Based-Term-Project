@@ -18,7 +18,7 @@ if(!isset($_SESSION['sess_user_id']) || (trim($_SESSION['sess_user_id']) == ''))
 {
 	$loggedIn = true;
 }
-echo $layout->loadNarrowNav('Home', '');
+echo $layout->loadNarrowNav('API Code', '');
 ?>
 
 <div class="container">
@@ -219,6 +219,43 @@ echo $layout->loadNarrowNav('Home', '');
 				<div class="well well-small">
 					<strong>Link to their documentation for all the HTML/CSS/JS/etc. calls:</strong><br>
 					<a href="http://getbootstrap.com">Link to Bootstrap Site</a>
+				</div>
+			  </div>
+			</div>
+		  </div>
+		  <div class="panel panel-fb">
+			<div class="panel-heading">
+			  <h4 class="panel-title">
+				<a data-toggle="collapse" data-parent="#accordion" href="#collapseEight">
+				  Facebook SDK
+				</a>
+			  </h4>
+			</div>
+			<div id="collapseEight" class="panel-collapse collapse">
+			  <div class="panel-body">
+				<div class="well well-small">				
+					require_once '/facebook-php-sdk-master/facebook-php-sdk-master/src/facebook.php';<br>
+					<br>
+					<strong>Create our Application instance (replace this with your appId and secret):</strong><br>
+					$facebook = new Facebook(array(<br>
+					  'appId'  => 'YOUR APP ID',<br>
+					  'secret' => 'YOUR SECRET APP ID',<br>
+					));<br>
+					<br>
+					<strong>Get User ID:</strong><br>
+					$user = $facebook->getUser();<br>
+					<br>
+					<strong>Verify the user is logged in and authenticated:</strong><br>
+					if ($user) {<br>
+					  try {<br>
+						// Proceed knowing you have a logged in user who's authenticated.<br>
+						$user_profile = $facebook->api('/me');<br>
+					  } catch (FacebookApiException $e) {<br>
+						error_log($e);<br>
+						$user = null;<br>
+					  }<br>
+					}<br><br>
+					<a href="code for API/facebook_login.txt">Link to TXT</a>
 				</div>
 			  </div>
 			</div>
