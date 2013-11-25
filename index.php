@@ -69,7 +69,7 @@ echo $layout->loadNarrowNav('Home', '');
 	<div id="push"></div>
 	</div>
 </div>
-<?php	  
+<?php
 echo $layout->loadFooter('');
 ?>
 <script src="bootstrap/dist/js/loadphp.js"></script>
