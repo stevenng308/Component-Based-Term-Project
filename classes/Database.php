@@ -20,22 +20,27 @@ class Database
 	
 	public function insert($data)
 	{
-		$password = $data['password'];
-		$hash = hash('sha256', $password);
-		function createSalt()
-		{
-			$text = md5(uniqid(rand(), true));
-			return substr($text, 0, 3);
+		// Search for user by firstname, lastname, & password to ensure no previous match before insertion
+		$query_initial = mysql_query("SELECT * FROM member WHERE email = '". mysql_real_escape_string($data['email']) ."';");
+		$result = mysql_fetch_array($query_initial);
+		if(empty($result)){
+			$password = $data['password'];
+			$hash = hash('sha256', $password);
+			function createSalt()
+			{
+				$text = md5(uniqid(rand(), true));
+				return substr($text, 0, 3);
+			}
+			$salt = createSalt();
+			//while (true)
+			//echo $salt;
+			$password = hash('sha256', $salt . $hash);
+			$query = "INSERT INTO member (firstname, lastname, password, email, salt) VALUES ('". mysql_real_escape_string($data['firstname']) ."', '". mysql_real_escape_string($data['lastname']) ."', '". $password ."', '". mysql_real_escape_string($data['email']) ."', '". $salt ."');";
+			
+			mysql_query($query);
+			//while (true)
+			//echo $salt;
 		}
-		$salt = createSalt();
-		//while (true)
-		//echo $salt;
-		$password = hash('sha256', $salt . $hash);
-		$query = "INSERT INTO member (firstname, lastname, password, email, salt) VALUES ('". mysql_real_escape_string($data['firstname']) ."', '". mysql_real_escape_string($data['lastname']) ."', '". $password ."', '". mysql_real_escape_string($data['email']) ."', '". $salt ."');";
-		
-		mysql_query($query);
-		//while (true)
-		//echo $salt;
 	}
 	
 	public function twitterLogin($data, $token)

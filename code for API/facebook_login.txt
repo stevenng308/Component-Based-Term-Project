@@ -1,0 +1,24 @@
+// Allow use of the facebook sdk
+
+require_once '/facebook-php-sdk-master/facebook-php-sdk-master/src/facebook.php';
+
+// Create our Application instance (replace this with your appId and secret).
+$facebook = new Facebook(array(
+  'appId'  => '675454145821609',
+  'secret' => 'e6e3fca3924c743be1a7c400c8de34f5',
+));
+
+// Get User ID
+$user = $facebook->getUser();
+
+// Verify the user is logged in and authenticated
+if ($user) {
+  try {
+    // Proceed knowing you have a logged in user who's authenticated.
+    $user_profile = $facebook->api('/me');
+  } catch (FacebookApiException $e) {
+    error_log($e);
+    $user = null;
+  }
+}
+
