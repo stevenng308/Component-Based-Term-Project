@@ -4,9 +4,7 @@
 
 <html xmlns:fb="http://www.facebook.com/2008/fbml">
 <?php
-
 require_once '\AutoLoader.php';
-
 spl_autoload_register(array('AutoLoader', 'autoLoad'));
 
 $layout = new Layout();
@@ -45,7 +43,6 @@ echo $layout->loadNarrowNav('Registration', '');
 		<button class="btn btn-lg btn-primary btn-block" type="submit" name="submit" value="Register">Submit</button>
 					
 	</form>
-	
 	<?php
 		$escape = true;
 		if (isset($_POST['submit'])) 

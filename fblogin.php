@@ -143,5 +143,7 @@ function deleteSession(){
 	
 	<!-- Custom styles for this template -->
 	<link href="bootstrap/dist/css/signin.css" rel="stylesheet">
-  </body>
+<?php	  
+echo $layout->loadFooter('');
+?>
 </html>

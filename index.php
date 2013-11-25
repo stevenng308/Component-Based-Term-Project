@@ -19,13 +19,13 @@ if(!isset($_SESSION['sess_user_id']) || (trim($_SESSION['sess_user_id']) == ''))
 	$loggedIn = true;
 }
 echo $layout->loadNarrowNav('Home', '');
-if(isset($_SESSION)){
+/*if(isset($_SESSION)){
 	if(array_key_exists( 'sess_username',$_SESSION )){
 		$uname = $_SESSION['sess_username'];
 		if($uname)
 			echo "<div style='text-align:right'><h4>Welcome ". $uname ."</h4></div>";
 	}
-}
+}*/
 ?>
 <!-- Custom styles for this page-->
 <link href="bootstrap/dist/css/jumbotron-narrow.css" rel="stylesheet">
@@ -55,7 +55,7 @@ if(isset($_SESSION)){
 	{
 		echo '<div class="jumbotron">
 			<h1>Welcome to<br /> Paws For A Cause!</h1>
-			<p class="lead">Thank you for registering, '. $_SESSION['sess_username'] .'. To view the list of companions that are looking for a new home and friend, please click the button below.</p>
+			<p class="lead">Thank you for registering, <strong>'. $_SESSION['sess_username'] .'</strong>. To view the list of companions that are looking for a new home and friend, please click the button below.</p>
 			<p><a class="btn btn-lg btn-success" href="adopt.php">Adopt Today</a></p>
 		</div>';
 	}
