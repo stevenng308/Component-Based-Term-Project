@@ -56,7 +56,7 @@ if ($user) {
 			<button class="btn btn-lg btn-primary btn-block" type="submit" name="submit">Sign in</button> 
 			<br />
 			<div class="row">
-			  <div class="col-md-6"><a href="twitterlogin.php" target="_blank"><img src="images/login_twitter.png" alt="Login with Twitter"></a></div>
+			  <div class="col-md-6"><a href="twitterlogin.php"><img src="images/login_twitter.png" alt="Login with Twitter"></a></div>
 			  <div class="col-md-6"><a href="fblogin.php"><img src="images/login_fb.png" alt="Login with Facebook"></a></div>
 			</div>
 			<span class="help-block">Don't have an account? Click <a href="register.php">here</a> to register for one.</span>
