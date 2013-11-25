@@ -48,7 +48,7 @@ echo $layout->loadNarrowNav('Home', '');
 	{
 		echo '<div class="jumbotron">
 			<h1>Welcome to<br /> Paws For A Cause!</h1>
-			<p class="lead">Thank you for registering. To view the list of companions that are looking for a new home and friend, please click the button below.</p>
+			<p class="lead">Thank you for registering, '. $_SESSION['sess_username'] .'. To view the list of companions that are looking for a new home and friend, please click the button below.</p>
 			<p><a class="btn btn-lg btn-success" href="adopt.php">Adopt Today</a></p>
 		</div>';
 	}

@@ -40,7 +40,7 @@ echo $layout->loadNarrowNav('Adopt', '');
 	{	echo '
 		<div class="jumbotron">
 			<h1>Welcome to<br /> Paws For A Cause!</h1>
-			<p class="lead">Adopt a paws in need and you will find a new bond with your new furry companion. Register a new account or sign in with your existing account.</p>
+			<p class="lead">Adopt a paws in need and you will find a new bond with your new furry companion. Register an account or sign in with your existing account.</p>
 			<p><a class="btn btn-lg btn-success" href="register.php">Sign up today</a></p>
 		</div>
 		';
