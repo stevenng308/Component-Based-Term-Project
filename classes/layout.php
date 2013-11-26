@@ -81,6 +81,7 @@ class Layout
 				$links = '<li class="active"><a href="index.php">Home</a></li>
 					<li><a href="adopt.php">Adopt</a></li>
 					<li><a href="email_newsletter_signup.php">Newsletter</a></li>
+					<li><a href="photos.php">Photos</a></li>
 					<li><a href="login.php">Sign-In</a></li>
 					<li class="active"><a href="#" data-container="body" data-toggle="popover" 
 					data-placement="bottom" data-content="" data-original-title="" title="">
@@ -92,6 +93,7 @@ class Layout
 				$links = '<li class="active"><a href="index.php">Home</a></li>
 					<li><a href="adopt.php">Adopt</a></li>
 					<li><a href="email_newsletter_signup.php">Newsletter</a></li>
+					<li><a href="photos.php">Photos</a></li>
 					<li><a href="classes/logout.php">Sign-Out</a></li>
 					<li class="active"><a href="#" data-container="body" data-toggle="popover" 
 					data-placement="bottom" data-content="" data-original-title="" title="">
@@ -106,6 +108,7 @@ class Layout
 				$links = '<li><a href="index.php">Home</a></li>
 					<li><a href="adopt.php">Adopt</a></li>
 					<li><a href="email_newsletter_signup.php">Newsletter</a></li>
+					<li><a href="photos.php">Photos</a></li>
 					<li class="active"><a href="login.php">Sign-In</a></li>
 					<li class="active"><a href="#" data-container="body" data-toggle="popover" 
 					data-placement="bottom" data-content="" data-original-title="" title="">
@@ -117,6 +120,7 @@ class Layout
 				$links = '<li><a href="index.php">Home</a></li>
 					<li><a href="adopt.php">Adopt</a></li>
 					<li><a href="email_newsletter_signup.php">Newsletter</a></li>
+					<li><a href="photos.php">Photos</a></li>
 					<li class="active"><a href="classes/logout.php">Sign-Out</a></li>
 					<li class="active"><a href="#" data-container="body" data-toggle="popover" 
 					data-placement="bottom" data-content="" data-original-title="" title="">
@@ -132,6 +136,7 @@ class Layout
 				$links = '<li><a href="index.php">Home</a></li>
 					<li class="active"><a href="adopt.php">Adopt</a></li>
 					<li><a href="email_newsletter_signup.php">Newsletter</a></li>
+					<li><a href="photos.php">Photos</a></li>
 					<li><a href="login.php">Sign-In</a></li>
 					<li class="active"><a href="#" data-container="body" data-toggle="popover" 
 					data-placement="bottom" data-content="" data-original-title="" title="">
@@ -143,6 +148,7 @@ class Layout
 				$links = '<li><a href="index.php">Home</a></li>
 					<li class="active"><a href="adopt.php">Adopt</a></li>
 					<li><a href="email_newsletter_signup.php">Newsletter</a></li>
+					<li><a href="photos.php">Photos</a></li>
 					<li><a href="classes/logout.php">Sign-Out</a></li>
 					<li class="active"><a href="#" data-container="body" data-toggle="popover" 
 					data-placement="bottom" data-content="" data-original-title="" title="">
@@ -158,6 +164,7 @@ class Layout
 				$links = '<li><a href="index.php">Home</a></li>
 					<li><a href="adopt.php">Adopt</a></li>
 					<li class="active"><a href="email_newsletter_signup.php">Newsletter</a></li>
+					<li><a href="photos.php">Photos</a></li>
 					<li><a href="login.php">Sign-In</a></li>
 					<li class="active"><a href="#" data-container="body" data-toggle="popover" 
 					data-placement="bottom" data-content="" data-original-title="" title="">
@@ -169,6 +176,7 @@ class Layout
 				$links = '<li><a href="index.php">Home</a></li>
 					<li><a href="adopt.php">Adopt</a></li>
 					<li><a href="email_newsletter_signup.php">Newsletter</a></li>
+					<li><a href="photos.php">Photos</a></li>
 					<li class="active"><a href="classes/logout.php">Sign-Out</a></li>
 					<li class="active"><a href="#" data-container="body" data-toggle="popover" 
 					data-placement="bottom" data-content="" data-original-title="" title="">
@@ -177,6 +185,36 @@ class Layout
 			}
 			
 		}
+		
+		else if ($title == "Photos")
+		{
+			if(!isset($_SESSION['sess_user_id']) || (trim($_SESSION['sess_user_id']) == '')) 
+			{
+				$links = '<li><a href="index.php">Home</a></li>
+					<li><a href="adopt.php">Adopt</a></li>
+					<li><a href="email_newsletter_signup.php">Newsletter</a></li>
+					<li class="active"><a href="photos.php">Photos</a></li>
+					<li><a href="login.php">Sign-In</a></li>
+					<li class="active"><a href="#" data-container="body" data-toggle="popover" 
+					data-placement="bottom" data-content="" data-original-title="" title="">
+					<span class="badge"><span class="simpleCart_quantity"></span></span> Items - <span class="simpleCart_total"></span>&nbsp;<span class="glyphicon glyphicon-shopping-cart"></span>
+					</a></li>';
+			}
+			else
+			{
+				$links = '<li><a href="index.php">Home</a></li>
+					<li><a href="adopt.php">Adopt</a></li>
+					<li><a href="email_newsletter_signup.php">Newsletter</a></li>
+					<li class="active"><a href="photos.php">Photos</a></li>
+					<li><a href="classes/logout.php">Sign-Out</a></li>
+					<li class="active"><a href="#" data-container="body" data-toggle="popover" 
+					data-placement="bottom" data-content="" data-original-title="" title="">
+					<span class="badge"><span class="simpleCart_quantity"></span></span> Items - <span class="simpleCart_total"></span>&nbsp;<span class="glyphicon glyphicon-shopping-cart"></span>
+					</a></li>';
+			}
+			
+		}
+		
 		else
 		{
 			if(!isset($_SESSION['sess_user_id']) || (trim($_SESSION['sess_user_id']) == '')) 
@@ -184,6 +222,7 @@ class Layout
 				$links = '<li><a href="index.php">Home</a></li>
 					<li class="active"><a href="adopt.php">Adopt</a></li>
 					<li><a href="email_newsletter_signup.php">Newsletter</a></li>
+					<li><a href="photos.php">Photos</a></li>
 					<li><a href="login.php">Sign-In</a></li>
 					<li class="active"><a href="#" data-container="body" data-toggle="popover" 
 					data-placement="bottom" data-content="" data-original-title="" title="">
@@ -195,6 +234,7 @@ class Layout
 				$links = '<li><a href="index.php">Home</a></li>
 					<li class="active"><a href="adopt.php">Adopt</a></li>
 					<li><a href="email_newsletter_signup.php">Newsletter</a></li>
+					<li><a href="photos.php">Photos</a></li>
 					<li><a href="classes/logout.php">Sign-Out</a></li>
 					<li class="active"><a href="#" data-container="body" data-toggle="popover" 
 					data-placement="bottom" data-content="" data-original-title="" title="">
@@ -240,11 +280,13 @@ class Layout
 		$func = '
 		<div class="footer" id="footer">
 			<p align="left"></p>
-			<p align="right"><a href="https://www.facebook.com/pages/Paws-For-A-Cause/252178178270162" target="_blank"> <img src="images/link_FB.png" alt="Facebook Page" width="50" height="15"></a>
+			<p align="right"><a href="https://www.facebook.com/pages/Paws-For-A-Cause/252178178270162" target="_blank"> <img src="images/link_FB.png" alt="Facebook Page" width="50" height="19"></a>
 			&emsp;
-			<a href="https://www.youtube.com/channel/UC3wyvPqbs_uBriosYLRctNA" target="_blank"> <img src="images/link_YT.png" alt="Youtube Channel" width="50" height="15"></a>
+			<a href="https://www.youtube.com/channel/UC3wyvPqbs_uBriosYLRctNA" target="_blank"> <img src="images/link_YT.png" alt="Youtube Channel" width="50" height="19"></a>
 			&emsp;
-			<a href="https://twitter.com/Paws4ACause0" target="_blank"> <img src="images/link_Twitter.png" alt="Twitter Feed" width="50" height="15"></a>
+			<a href="https://twitter.com/Paws4ACause0" target="_blank"> <img src="images/link_Twitter.png" alt="Twitter Feed" width="50" height="19"></a>
+			&emsp;
+			<a href="http://www.flickr.com/photos/109885256@N08/" target="_blank"> <img src="images/link_Flickr.png" alt="http://www.flickr.com/" width="50" height="17"></a>
 			&emsp;
 			<a href="code.php">Code</a> &copy; Steven Ng, Jestin Keaton, Zach Nelson 2013</p>
 		</div>
