@@ -5574,6 +5574,24 @@ a.list-group-item:focus {
   border-bottom-color: #344e86;
 }
 
+.panel-flickr {
+  border-color: #0063dc;
+}
+
+.panel-flickr > .panel-heading {
+  color: #FFFFFF;
+  background-color: #ff0084;
+  border-color: #0063dc;
+}
+
+.panel-flickr > .panel-heading + .panel-collapse .panel-body {
+  border-top-color: #0063dc;
+}
+
+.panel-flickr > .panel-footer + .panel-collapse .panel-body {
+  border-bottom-color: #0063dc;
+}
+
 .well {
   min-height: 20px;
   padding: 19px;

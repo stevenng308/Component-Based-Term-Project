@@ -183,6 +183,8 @@ echo $layout->loadNarrowNav('API Code', '');
 				<div class="well well-small">
 					<strong>Embed Link</strong><br>
 					&lt;iframe width="560" height="315" src="//www.youtube.com/embed/uORygjlWQYE?list=PL-Fu5OO4vL-LfqC-Ri-KNKmUcKUyM1F2E" frameborder="0" allowfullscreen&gt;&lt;/iframe&gt;
+					<br><br>
+					<a href="code for API/flickr.txt">Link to TXT</a>
 				</div>
 			  </div>
 			</div>
@@ -256,6 +258,33 @@ echo $layout->loadNarrowNav('API Code', '');
 					  }<br>
 					}<br><br>
 					<a href="code for API/facebook_login.txt">Link to TXT</a>
+				</div>
+			  </div>
+			</div>
+		  </div>
+		  <div class="panel panel-flickr">
+			<div class="panel-heading">
+			  <h4 class="panel-title">
+				<a data-toggle="collapse" data-parent="#accordion" href="#collapseNine">
+				  Flickr Slideshow
+				</a>
+			  </h4>
+			</div>
+			<div id="collapseNine" class="panel-collapse collapse">
+			  <div class="panel-body">
+				<div class="well well-small">
+					<strong>Embed Link</strong><br>
+					<!--&lt;object width="100%" height="450"&gt;<br>
+						&lt;param name="flashvars" value="offsite=true&lang=en-us&page_show_url=%2Fphotos%2F109885256%40N08%2Fsets%2F72157638072963065%2Fshow%2F&page_show_back_url=%2Fphotos%2F109885256%40N08%2Fsets%2F72157638072963065%2F&set_id=72157638072963065&jump_to="&gt;<br>
+						&lt;/param&gt;<br>
+						&lt;param name="movie" value="http://www.flickr.com/apps/slideshow/show.swf?v=138195">&lt;/param&gt;<br> 
+						&lt;param name="allowFullScreen" value="true"&gt;<br>
+						&lt;/param&gt;<br>
+						&lt;embed type="application/x-shockwave-flash" src="http://www.flickr.com/apps/slideshow/show.swf?v=138195" allowFullScreen="true" <br>flashvars="offsite=true&lang=en-us&page_show_url=%2Fphotos%2F109885256%40N08%2Fsets%2F72157638072963065%2Fshow%2F& <br> page_show_back_url=%2Fphotos%2F109885256%40N08%2Fsets%2F72157638072963065%2F&set_id=72157638072963065&jump_to=" width="400" height="300"&gt;<br>
+						&lt;/embed&gt;<br>-->
+						<p>Too long to include here. Use the link to text file.</p>
+						<a href="code for API/flickr.txt">Link to TXT</a>
+					</object>
 				</div>
 			  </div>
 			</div>

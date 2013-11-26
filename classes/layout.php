@@ -246,6 +246,8 @@ class Layout
 			&emsp;
 			<a href="https://twitter.com/Paws4ACause0" target="_blank"> <img src="images/link_Twitter.png" alt="Twitter Feed" width="50" height="15"></a>
 			&emsp;
+			<a href="http://www.flickr.com/photos/109885256@N08/" target="_blank"> <img src="images/link_Flickr.png" alt="http://www.flickr.com/" width="50" height="17"></a>
+			&emsp;
 			<a href="code.php">Code</a> &copy; Steven Ng, Jestin Keaton, Zach Nelson 2013</p>
 		</div>
         </div> <!--/ container -->

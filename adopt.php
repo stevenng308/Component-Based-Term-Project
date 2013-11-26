@@ -41,6 +41,14 @@ echo $layout->loadNarrowNav('Adopt', '');
 		<div class="jumbotron">
 			<h1>Welcome to<br /> Paws For A Cause!</h1>
 			<p class="lead">Adopt a paws in need and you will find a new bond with your new furry companion. Register an account or sign in with your existing account.</p>
+			<object width="100%" height="450"> 
+				<param name="flashvars" value="offsite=true&lang=en-us&page_show_url=%2Fphotos%2F109885256%40N08%2Fsets%2F72157638072963065%2Fshow%2F&page_show_back_url=%2Fphotos%2F109885256%40N08%2Fsets%2F72157638072963065%2F&set_id=72157638072963065&jump_to=">
+				</param> 
+				<param name="movie" value="http://www.flickr.com/apps/slideshow/show.swf?v=138195"></param> <param name="allowFullScreen" value="true">
+				</param>
+				<embed type="application/x-shockwave-flash" src="http://www.flickr.com/apps/slideshow/show.swf?v=138195" allowFullScreen="true" flashvars="offsite=true&lang=en-us&page_show_url=%2Fphotos%2F109885256%40N08%2Fsets%2F72157638072963065%2Fshow%2F&page_show_back_url=%2Fphotos%2F109885256%40N08%2Fsets%2F72157638072963065%2F&set_id=72157638072963065&jump_to=" width="400" height="300">
+				</embed>
+			</object>
 			<p><a class="btn btn-lg btn-success" href="register.php">Sign up today</a></p>
 		</div>
 		';
@@ -52,8 +60,16 @@ echo $layout->loadNarrowNav('Adopt', '');
 			</div>
 			<div class="jumbotron">
 			<iframe width="560" height="315" src="//www.youtube.com/embed/uORygjlWQYE?list=PL-Fu5OO4vL-LfqC-Ri-KNKmUcKUyM1F2E" frameborder="0" allowfullscreen></iframe>
+			<br><br>
+			<object width="100%" height="450"> 
+				<param name="flashvars" value="offsite=true&lang=en-us&page_show_url=%2Fphotos%2F109885256%40N08%2Fsets%2F72157638072963065%2Fshow%2F&page_show_back_url=%2Fphotos%2F109885256%40N08%2Fsets%2F72157638072963065%2F&set_id=72157638072963065&jump_to=">
+				</param> 
+				<param name="movie" value="http://www.flickr.com/apps/slideshow/show.swf?v=138195"></param> <param name="allowFullScreen" value="true">
+				</param>
+				<embed type="application/x-shockwave-flash" src="http://www.flickr.com/apps/slideshow/show.swf?v=138195" allowFullScreen="true" flashvars="offsite=true&lang=en-us&page_show_url=%2Fphotos%2F109885256%40N08%2Fsets%2F72157638072963065%2Fshow%2F&page_show_back_url=%2Fphotos%2F109885256%40N08%2Fsets%2F72157638072963065%2F&set_id=72157638072963065&jump_to=" width="400" height="300">
+				</embed>
+			</object>
 			</div>
-			&nbsp;
 			';
 	}
 ?>
