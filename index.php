@@ -18,14 +18,8 @@ if(!isset($_SESSION['sess_user_id']) || (trim($_SESSION['sess_user_id']) == ''))
 {
 	$loggedIn = true;
 }
+
 echo $layout->loadNarrowNav('Home', '');
-/*if(isset($_SESSION)){
-	if(array_key_exists( 'sess_username',$_SESSION )){
-		$uname = $_SESSION['sess_username'];
-		if($uname)
-			echo "<div style='text-align:right'><h4>Welcome ". $uname ."</h4></div>";
-	}
-}*/
 ?>
 <!-- Custom styles for this page-->
 <link href="bootstrap/dist/css/jumbotron-narrow.css" rel="stylesheet">

@@ -63,7 +63,7 @@ echo $layout->loadNarrowNav('View Cart', '');
 	<br>
 	<div align="right">
 		<a href="javascript:;" class="btn btn-lg btn-danger simpleCart_empty">Empty Cart</a>
-		<a href="javascript:;" class="btn btn-lg btn-success" simpleCart_checkout">Checkout</a>
+		<a href="javascript:;" class="btn btn-lg btn-success simpleCart_checkout">Checkout</a>
 	</div>
 	
 	<!--push div to push the footer down-->
