@@ -4,15 +4,6 @@
 
 <html xmlns:fb="http://www.facebook.com/2008/fbml">
 
-
-<style type="text/css">
-
-  #oauth2-results pre { margin: 0; padding:0; width: 600px;}
-  .hide { display: none;}
-  .show { display: block;}
-</style>
-
-<script src="https://apis.google.com/js/client:platform.js" type="text/javascript"></script>
 <?php
 require_once '\AutoLoader.php';
 require 'facebook-php-sdk-master/facebook-php-sdk-master/src/facebook.php';
@@ -31,12 +22,6 @@ $facebook = new Facebook(array(
 ));
 $user = $facebook->getUser();
 $access_token = $facebook->getAccessToken();
-$G_VARS = array(
-	'firstname' => '',
-	'lastname' => '',
-	'email' => '',
-	'password' => '',
-	'password2' => '');
 if ($user){
 	try {
 		// Proceed knowing you have a logged in user who's authenticated.
@@ -71,16 +56,9 @@ if ($user) {
 			</label>
 			<button class="btn btn-lg btn-primary btn-block" type="submit" name="submit">Sign in</button> 
 			<br />
-			<div>
-				<p><div><a href="twitterlogin.php"><img src="images/login_twitter.png" alt="Login with Twitter"></a></div></p>
-				<p><div><a href="fblogin.php"><img src="images/login_fb.png" alt="Login with Facebook"></a></div></p>
-				<p><div><a href="gplus_test.php"><img src="images/login_google.png" alt="Login with Facebook"></a></div></p>
-				<div id="insertButton"></div>
-				<div id="signin-button" class="show">
-					<div id="renderMe"></div>
-				</div>
-				<div id="username"></div>
-				<div id="oauth2-results" class="hide"></div>
+			<div class="row">
+				<div class="col-xs-6"><a href="twitterlogin.php"><img src="images/login_twitter.png" alt="Login with Twitter"></a></div>
+				<div class="col-xs-6"><a href="fblogin.php"><img src="images/login_fb.png" alt="Login with Facebook"></a></div>
 			</div>
 			<span class="help-block">Don't have an account? Click <a href="register.php">here</a> to register for one.</span>
 	</form>
@@ -153,27 +131,7 @@ if ($user) {
 				header('Location: index.php');
 			}
 		}
-		else{ // this is the Google case
-			// Added facebook check to see if the current user is already in the database
-			if(!isset($_SESSION)){
-				session_start();
-			}
-			echo "<h1>hello</h1>";
-			echo $_SESSION['token'];
-			$email1 = substr($_SESSION['token'],50);
-			$query_initial = "SELECT id, firstname, lastname, password, email, salt FROM member WHERE email = '$email1';";
-			$result_initial = mysql_query($query_initial);
-			
-			if(mysql_num_rows($result_initial) != 0){
-				echo "<h1>goodbye</h1>";
-				$userData = mysql_fetch_array($result_initial, MYSQL_ASSOC);
-				session_regenerate_id();
-				$_SESSION['sess_user_id'] = $_SESSION['token'];
-				$_SESSION['sess_username'] = $_SESSION['token'];
-				session_write_close();
-				header('Location: index.php');
-			}
-		}
+		
 	?>
 	<div id="push"></div>
 	</div>
@@ -181,28 +139,4 @@ if ($user) {
 <?php	  
 echo $layout->loadFooter('');
 ?>
-
-<script type="text/javascript">
-var profile = function(){
-	var request = gapi.client.plus.people.get( {'userId' : 'me'} );
-	request.execute( function(profile) {
-		$('#profile').empty();
-		var uname = document.getElementById('username');
-		uname.innerHTML = '<h1>hello</h1>';
-		if (profile.error) {
-			$('#profile').append(profile.error);
-			return;
-		}
-		$('#profile').append(
-			$('<p><img src=\"' + profile.image.url + '\"></p>'));
-		$('#profile').append(
-			$('<p>Hello ' + profile.displayName + '!<br />Tagline: ' +
-			profile.tagline + '<br />About: ' + profile.aboutMe + '</p>'));
-		if (profile.cover && profile.coverPhoto) {
-			$('#profile').append(
-			$('<p><img src=\"' + profile.cover.coverPhoto.url + '\"></p>'));
-		}
-	});
-}
-</script>
 </html>
