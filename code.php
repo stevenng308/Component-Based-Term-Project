@@ -35,6 +35,12 @@ echo $layout->loadNarrowNav('API Code', '');
 			<div id="collapseOne" class="panel-collapse collapse in">
 			  <div class="panel-body">
 				<div class="well well-small">
+				<strong>Add item to the cart:</strong><br>
+				&lt;div class="simpleCart_shelfItem"&gt;
+					&lt;h3 class="item_name"&gt;CoolDog
+					&lt;span class="item_price">$49.99&lt;/span&gt;&lt;/h3&gt;
+					&lt;p>&lt;a href="javascript:;" class="btn btn-sm btn-primary item_add"&gt; Add to Cart &lt;/a&gt;&lt;/p&gt;
+				&lt;/div&gt;<br><br>
 				<strong>Displaying # of items in the cart:</strong><br>
 				&lt;span class="simpleCart_quantity"&gt;&lt;/span&gt;<br>
 				<br>

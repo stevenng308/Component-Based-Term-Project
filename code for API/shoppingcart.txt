@@ -1,5 +1,14 @@
 simplecartjs code:
 
+add item to the cart
+<div class="simpleCart_shelfItem">
+	<h3 class="item_name">CoolDog
+	<span class="item_price">$49.99</span></h3>
+	<p>Cooldog is very cool and chill. The fluffy white coat will relax your anxieties away.</p>
+	<span class="label label-info">ChilliDog</span>
+	<p><a href="javascript:;" class="btn btn-sm btn-primary item_add"> Add to Cart </a> <!--<a href="#" class="btn btn-default" role="button">Button</a>--></p>
+</div>
+					
 displaying # items in the cart
 <span class="simpleCart_quantity"></span></span>
 

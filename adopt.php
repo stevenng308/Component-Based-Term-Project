@@ -48,7 +48,7 @@ echo $layout->loadNarrowNav('Adopt', '');
 				</param>
 				<embed type="application/x-shockwave-flash" src="http://www.flickr.com/apps/slideshow/show.swf?v=138195" allowFullScreen="true" flashvars="offsite=true&lang=en-us&page_show_url=%2Fphotos%2F109885256%40N08%2Fsets%2F72157638072963065%2Fshow%2F&page_show_back_url=%2Fphotos%2F109885256%40N08%2Fsets%2F72157638072963065%2F&set_id=72157638072963065&jump_to=" width="400" height="300">
 				</embed>
-			</object>
+			</object><br>
 			<p><a class="btn btn-lg btn-success" href="register.php">Sign up today</a></p>
 		</div>
 		';
